@@ -1,0 +1,27 @@
+<block>
+    <view class='searchServe'>
+        <view class='input_wrap'>
+            <view class='input_content'>
+                <input class="input"></input>
+                <view class='icons icon-close'>x</view>
+            </view>
+        </view>
+        <view wx:if='{{!false}}' class='serve_wrap'>
+            <view class="serve_content" wx:for='{{serveDatas}}' wx:key='index' bindtap='serveClick' data-item='{{item}}'>
+                <view class="serve_main">
+                    <view class='serve_li serve_name'>{{item.serv_name}}</view>
+                    <view class='serve_li serve_duration'>{{item.duration}}分钟</view>
+                    <view class='serve_li serve_price'>
+                        <text class="now_price">现价：{{item.mkt_price}}</text>
+                        <text class="original_price">原价：{{item.sale_price}}</text>
+                    </view>
+                    <view class="icons">+</view>
+                </view>
+            </view>
+        </view>
+        <view wx:else class="no_serve_wrap">
+            <image class='img' src="../../images/searchserve/noserve.jpg" />
+        </view>
+    </view>
+</block>
+<component-chosen datas='{{}}' bind:chosenevent=''></component-chosen>

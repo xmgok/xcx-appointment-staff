@@ -1,0 +1,62 @@
+<view class="page-filllog-view" wx:if="{{!nologFlag}}">
+    <!-- 头部 -->
+    <view class="header">
+        <text>重要信息记录</text>
+        <view class="icon-camera">
+            <image class='img' src="../../images/del/icon-camera-log.png" bindtap="upLoad"></image>
+        </view>
+    </view>
+    <view class="fill-log">
+        <textarea placeholder="客户的需求、禁忌，护理前后的变化" placeholder-style="color:#aaa;" bindconfirm="fillTextarea" value="{{textarea}}"/>
+    </view>
+    <!-- 日志填写结果 -->
+    <view class="fill-log-result" wx:if="{{resLabelList.length>0||imgList.length>0}}">
+        <!-- 标签内容 -->
+        <view class="label-view">
+            <view class="label-item" wx:for="{{resLabelList}}" wx:for-item="labItem" wx:for-index="labelId" wx:key="*this">
+                <text class="label-txt">{{labItem.text}}</text>
+                <image data-id="{{labelId}}" class="icon-del-pink" src="../../images/del/icon-del-pink.jpg" bindtap="delLabel"></image>
+            </view>
+        </view>
+        <!-- 上传图片 -->
+        <view class="images-view">
+            <view class="img-view"  wx:for="{{imgList}}" wx:for-item="photo" wx:for-index="phId" wx:key="*this">
+                <image class="img"  src="{{photo.photo}}" />
+                <image data-id="{{phId}}" class="icon-del-white" src="../../images/del/icon-del-white.png" bindtap="delImg"></image>
+            </view>
+        </view>
+    </view>
+    <view class="list-record">
+        <view class="record-header">客户变化记录</view>
+        <view class="content-wrap">
+            <!-- <view class="list-title">体型</view>
+            <view class="list-view">
+                <text class="label-item active">西洋梨型</text>
+                <text class="label-item">葫芦型</text>
+                <text class="label-item">苹果型</text>
+                <text class="label-item">中广型</text>
+                <text class="label-item">浮肉型</text>
+                <text class="label-item">松垮型</text>
+            </view> -->
+            <block wx:for="{{temporany}}" wx:for-item="recored" wx:for-index="index" wx:key="*this">
+                <view class="list-title">{{recored.title}}</view>
+                <view class="list-view">
+                    <text data-type='{{index}}' data-id="{{labelId}}" class="label-item {{recored.active==labelId?'active':''}}" wx:for="{{recored.dataList}}"  wx:for-item="labelItem" wx:for-index='labelId' wx:key="*this" bindtap="toggleLabelState">{{labelItem.label}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="load-more" bindtap="loadmore">
+        <text>点击加载更多</text>
+        <image src="../../images/del/load-more-arrow.jpg"></image>
+    </view>
+    <view class="view-btn">
+        <button class="btn-submit {{resLabelList.length>1&&imgList.length>1?'can-submit':''}}" bindtap="submit">提交</button>
+    </view>
+</view>
+<view class="nodata {{nologFlag?'in':''}}">
+    <view class="nodata-wrap">
+        <image class="img" mode="widthFix" src="../../images/log/nolog.jpg"  bindload=""></image>
+        <text class="text">没有需要填写的护理日志</text>
+    </view>
+</view>

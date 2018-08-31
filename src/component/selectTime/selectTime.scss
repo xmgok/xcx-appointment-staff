@@ -1,0 +1,118 @@
+@import "../../sass-utils/mix";
+@import "../../sass-utils/variables";
+.selectTime {
+    .select_time_content {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #fff;
+        .select_time_title {
+            padding: 0 pxrem(30);
+            background-color: #f5f5f5;
+            line-height: pxrem(120);
+            text-align: center;
+            font-size: pxrem(34);
+            .sure_btn{
+                color:#2c67f2;
+                font-size: pxrem(28)
+            }
+            .cancle_btn{
+                color:#92979b;
+                font-size: pxrem(28);
+            }
+        }
+        .steps_wrap {
+            .steps_item {
+                width: 16.66%;
+                text-align: center;
+                padding: pxrem(22) 0;
+                position: relative;
+                &.line_del {
+                    text-decoration: line-through;
+                    color: #cccccc;
+                }
+                &.bookable {
+                    color: $c3;
+                }
+                &.haveabout {
+                    color: #92979b;
+                }
+                .middle_bg {
+                    position: absolute;
+                    width: 100%;
+                    top: 50%;
+                    right: 0;
+                    padding: pxrem(18) 0;
+                    transform: translateY(-50%);
+                    z-index: 0;
+                    &.steps_middle {
+                        background-color: rgba(255, 81, 131, .2);
+                    }
+                    &.first_steps_middle {
+                        width: 25%;
+                        background-color: rgba(255, 81, 131, .2);
+                    }
+                    &.last_steps_middle {
+                        width: 25%;
+                        left: 0;
+                        background-color: rgba(255, 81, 131, .2);
+                    }
+                }
+                .steps_text {
+                    margin: 0 pxrem(6);
+                    border-radius: pxrem(50);
+                    padding: pxrem(8) 0;
+                    &.select {
+                        background-color: $c3;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .week_wrap {
+            display: flex;
+            .week_item {
+                padding: pxrem(32) 0;
+                flex: 1;
+                text-align: center;
+                .week_text {
+                    font-size: pxrem(24)
+                }
+                .week_day {
+                    font-size: pxrem(18);
+                    color: #92979b;
+                }
+                &.selected {
+                    color: $c3;
+                    .week_day {
+                        color: $c3;
+                    }
+                }
+            }
+        }
+    }
+    textarea{
+        z-index: -1;
+    }
+    background-color: rgba(0, 0, 0, .2);
+    position: fixed;
+    z-index:10000;
+    top:0;
+    left: 0;
+    right:0;
+    bottom:0;
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}

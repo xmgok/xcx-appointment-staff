@@ -1,0 +1,36 @@
+<view class="tec_tab">
+    <view class="before {{tabindex?'RShift':'LShift'}}"><text class="element" style="width:{{width}}"></text></view>
+    <view class="tec_tab_li {{tabindex==index?'active':''}}" data-index="{{index}}" bindtap="switchTab" wx:for="{{allottab}}" wx:key="{{index}}">
+        <text class="{{'switch'+index}}">{{item.nane}}</text>
+    </view>
+</view>
+<view class="results_li" wx:for="{{results}}" wx:key="{{index}}">
+    <view class="results_amount">
+        <view>{{item.date}}</view>
+        <view>
+            可分配总额：
+            <view class="amount">￥{{item.amount}}</view>
+        </view>
+    </view>
+    <view class="results_cust">
+        <view class="cust_name">{{item.cust_name}} <view class="cust_code"> {{item.cust_code}}</view></view>
+        <view class="results_btn {{tabindex?'colorBlue':'colorRed'}}" bindtap="allocation" data-item="{{item}}">{{tabindex?'查看分配':'立即分配'}}</view>
+    </view>
+    <view class="results_server">
+        <view class="server_text">服务技师：</view>
+        <view class="server_content">{{item.emp_name}}</view>
+    </view>
+    <view class="results_server">
+        <view class="server_text">服务项目：</view>
+        <view class="server_content">{{item.project}}</view>
+    </view>
+    <view class="results_server">
+        <view class="server_text">服务床位：</view>
+        <view class="server_content">{{item.beds}}</view>
+    </view>
+    <view class="results_server">
+        <view class="server_text">护理金额：</view>
+        <view class="server_content">￥{{item.camount}}</view>
+    </view>
+</view>
+<component-loading></component-loading>

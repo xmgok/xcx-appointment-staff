@@ -1,0 +1,48 @@
+<block>
+    <view class="chosen_wrap clear">
+        <view class="select_info" bindtap='seeSelect'>
+            已选择：
+            <text class="num">{{datas.select.length||0}}</text>
+            项服务
+        </view>
+        <view bindtap='submit' class="rt select_btn {{true?'':'no_select'}}">选好了</view>
+    </view>
+</block>
+<view class="fixed" wx:if='{{fixedShow}}'>
+    <view class="fixed_content">
+        <view class="fixed_title">
+            <view class="title">已选择的服务</view>
+            <view class="clear_all" bindtap='clearBtn'>清空服务</view>
+        </view>
+        <view class="fixed_main">
+            <view class="item" wx:for='{{datas.comboList}}' wx:key='{{index}}'>
+                <view class='cell' wx:for="{{item.cardList}}" wx:for-item='cell' wx:if='{{cell.count > 0 }}' wx:for-index='idx' wx:key='{{idx}}'>
+                    <view class="item_name">{{cell.name}}</view>
+                    <view class="item_count">
+                        <view wx:if="{{cell.count}}" class="icons_count count_minus" bindtap='subtractBtn' data-type='comboList' data-serIndex='{{index}}' data-item='{{cell}}' data-index="{{idx}}">
+                            -
+                        </view>
+                        <view wx:if="{{cell.count}}" class="counting">{{cell.count}}</view>
+                        <view class="icons_count count_add" bindtap='addBtn' data-serindex='{{index}}' data-type='comboList' data-item='{{cell}}' data-index="{{idx}}">
+                            +
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="item" wx:for='{{datas.serList}}' wx:key='{{index}}'>
+                <view class='cell' wx:for="{{item.cardList}}" wx:for-item='cell' wx:if='{{cell.count > 0 }}' wx:for-index='idx' wx:key='{{idx}}'>
+                    <view class="item_name">{{cell.name}}</view>
+                    <view class="item_count">
+                        <view wx:if="{{cell.count}}" class="icons_count count_minus" bindtap='subtractBtn' data-type='serList' data-serIndex='{{index}}' data-item='{{cell}}' data-index="{{idx}}">
+                            -
+                        </view>
+                        <view wx:if="{{cell.count}}" class="counting">{{cell.count}}</view>
+                        <view class="icons_count count_add" bindtap='addBtn' data-serindex='{{index}}' data-type='serList' data-item='{{cell}}' data-index="{{idx}}">
+                            +
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,32 @@
+<navigator class="New_item" url="/pages/customer-list/customer-list?type=1" hover-class="none">
+    <view class="New_title">客户</view>
+    <view class="New_info">{{id?id:'请选择'}} ></view>
+</navigator>
+<view class="New_item" bindtap="choose">
+    <view class="New_title">服务床位</view>
+    <view class="New_info">{{num?bedData[num].num:'请选择'}} ></view>
+</view>
+<navigator class="New_content" url="/pages/server_card_coupon/server_card_coupon?selecteditem={{selecteditem}}" hover-class="none">
+    <view class="New_roder">
+        <view>服务项目</view>
+        <view>{{selecteditem.length?'共'+ selecteditem.length +'项':'请选择'}} ></view>
+    </view>
+    <block wx:if="{{selecteditem.length}}">
+        <view class="New_roder" wx:for="{{selecteditem}}" wx:key="{{index}}">
+            <view class="roder_name">{{item.serv_name}}</view>
+            <view class="roder_margin">￥{{item.serv_price}} x {{item.serv_times}}</view>
+        </view>
+        <view class="New_roder">
+            <view></view>
+            <view>
+                总计： <view class="roder_margin">￥{{230}}</view>
+            </view>
+        </view>
+    </block>
+</navigator>
+<navigator class="New_item" url="/pages/technician/technician" hover-class="none">
+    <view class="New_title">服务技师</view>
+    <view class="New_info">{{employee.length?employee[0].emp_name:'请选择'}} ></view>
+</navigator>
+<view class="New_btn" bindtap="submit">提交</view>
+<component-chooseBed show="{{isShow}}" listData="{{bedData}}" bindcancel="onCancel" bindconfirm="onConfirm"></component-chooseBed>

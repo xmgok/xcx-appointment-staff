@@ -1,0 +1,125 @@
+@import "../../sass-utils/mix";
+@import "../../sass-utils/ui";
+
+.navigation-wrap {
+  height: rpx2(90);
+}
+
+.navigation-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99990;
+  width: 100%;
+  height: 100%;
+  background: rgba(39, 38, 54, 0.3);
+}
+
+.navigation {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99991;
+  width: 100%;
+  background: white;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  box-shadow: 0 rpx2(-2) rpx2(2) 0 rgba(0, 0, 0, 0.06);
+  .list-wrap {
+    -webkit-box-flex: 1;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    .item {
+      height: rpx2(49);
+      -webkit-box-flex: 1;
+      position: relative;
+      text-align: center;
+      line-height: rpx2(49);
+      font-size: rpx2(24);
+      color: rgba(166,166,176,1);
+      &.active {
+        color: rgba(39,38,54,1);
+      }
+      .num {
+        position: absolute;
+        left: 50%;
+        top: rpx2(5);
+        min-width: rpx2(10);
+        padding: 0 rpx2(4);
+        line-height: rpx2(18);
+        text-align: center;
+        font-size: rpx2(10);
+        background: #FF5183;
+        color: white;
+        border-radius: 50%;
+      }
+    }
+  }
+  .more-wrap {
+    width: rpx2(50);
+    height: rpx2(49);
+    margin: 0 rpx2(25);
+    position: relative;
+    .img-wrap {
+      width: rpx2(50);
+      height: rpx2(50);
+      position: absolute;
+      left: 0;
+      bottom: rpx2(10);
+      background: black;
+      border-radius: 50%;
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      z-index: 57;
+      image {
+        width: rpx2(24);
+        height: rpx2(24);
+      }
+    }
+    .more-list {
+      position: absolute;
+      left: 50%;
+      bottom: rpx2(-100);
+      margin-left: rpx2(-115);
+      background: white;
+      width: rpx2(230);
+      height: rpx2(230);
+      border-radius: 50%;
+      z-index: 56;
+      box-shadow: 0 rpx2(-2) rpx2(2) 0 rgba(0, 0, 0, 0.1);
+      .item {
+        text-align: center;
+        font-size: rpx2(10);
+        line-height: rpx2(14);
+        width: rpx2(48);
+        height: rpx2(48);
+        position: absolute;
+        text {
+          display: block;
+        }
+        .tb {
+          font-size: rpx2(20);
+          text-align: center;
+          line-height: rpx2(28);
+        }
+        &:nth-child(1) {
+          left: rpx2(20);
+          top: rpx2(75);
+        }
+        &:nth-child(2) {
+          left: rpx2(55);
+          top: rpx2(20);
+        }
+        &:nth-child(3) {
+          right: rpx2(55);
+          top: rpx2(20);
+        }
+        &:nth-child(4) {
+          right: rpx2(20);
+          top: rpx2(75);
+        }
+      }
+    }
+  }
+}

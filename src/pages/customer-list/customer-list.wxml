@@ -1,0 +1,148 @@
+<view class="page-customer-list page-customer-list{{type}}">
+    <view class="fixed-wrap">
+        <view class="search-wrap ">
+            <view class='search_content'>
+                <text class="icons icons-more"></text>
+                <input type="text" placeholder="请输入客户编号/手机/姓名" bindconfirm="bindconfirm"/>
+            </view>
+        </view>
+        <view class="select-wrap">
+            <view class="title">排序方式：</view>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+                <view class="picker-wrap picker-wrap{{type}}">
+                    <view class="picker">{{array[index]}}</view>
+                    <view class="arrow"></view>
+                </view>
+            </picker>
+            <view class="flex"></view>
+            <view class="picker-wrap" bindtap="showFilter">
+                <view class="picker">筛选规则</view>
+                <view class="arrow"></view>
+            </view>
+        </view>
+    </view>
+    <view class="list-wrap">
+        <block wx:if="{{type>1}}">
+            <view class="item" bindtap="chooseItem">
+                <view class="con">
+                    <view class="name"><text>张小姐</text>090309426</view>
+                    <view class="time">末次进店：2天前<text class="pl20">当月进店：6次</text></view>
+                </view>
+            </view>
+            <view class="item" bindtap="chooseItem">
+                <view class="con">
+                    <view class="name"><text>张小姐</text>090309426</view>
+                    <view class="time">末次进店：2天前<text class="pl20">当月进店：6次</text></view>
+                </view>
+            </view>
+            <view class="item" bindtap="chooseItem">
+                <view class="con">
+                    <view class="name"><text>张小姐</text>090309426</view>
+                    <view class="time">末次进店：2天前<text class="pl20">当月进店：6次</text></view>
+                </view>
+                <view class="tanhao">!</view>
+            </view>
+            <view class="item" bindtap="chooseItem">
+                <view class="con">
+                    <view class="name"><text>张小姐</text>090309426</view>
+                    <view class="time">末次进店：2天前<text class="pl20">当月进店：6次</text></view>
+                </view>
+                <view class="tanhao">!</view>
+            </view>
+            <view class="item">
+                <view class="con">
+                    <view class="name"><text>张小姐</text>090309426</view>
+                    <view class="time">末次进店：2天前<text class="pl20">当月进店：6次</text></view>
+                </view>
+                <view class="tanhao">!</view>
+            </view>
+            <view class="item">
+                <view class="con">
+                    <view class="name"><text>张小姐</text>090309426</view>
+                    <view class="time">末次进店：2天前<text class="pl20">当月进店：6次</text></view>
+                </view>
+                <view class="tanhao">!</view>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="item" bindtap="chooseItem">
+                <view class="con">
+                    <view class="name"><text>张小姐</text>090309426</view>
+                    <view class="time">进店时间：15:32<text class="pl20 ui-c4">2分钟前</text></view>
+                </view>
+            </view>
+            <view class="item" bindtap="chooseItem">
+                <view class="con">
+                    <view class="name"><text>张小姐</text>090309426</view>
+                    <view class="time">进店时间：15:32<text class="pl20 ui-c4">2分钟前</text></view>
+                </view>
+            </view>
+            <view class="item" bindtap="chooseItem">
+                <view class="con">
+                    <view class="name"><text>张小姐</text>090309426</view>
+                    <view class="time">进店时间：15:32<text class="pl20 ui-c4">2分钟前</text></view>
+                </view>
+            </view>
+            <view class="item" bindtap="chooseItem">
+                <view class="con">
+                    <view class="name"><text>张小姐</text>090309426</view>
+                    <view class="time">进店时间：15:32<text class="pl20 ui-c4">2分钟前</text></view>
+                </view>
+            </view>
+        </block>
+    </view>
+    <component-loading></component-loading>
+    <view class="ui-no-data">暂无数据</view>
+</view>
+
+<block wx:if="{{showFilter}}">
+    <view class="ui-dialog">
+        <view class="dialog-title">
+            <view class="title">筛选规则</view>
+            <view class="cancel" bindtap="bindCancel">取消</view>
+            <view class="confirm" bindtap="bindConfirm">确定</view>
+        </view>
+        <view class="dialog-content">
+            <view class="filter-wrap">
+                <view class="filter-item-wrap">
+                    <view class="filter-item-title">余额</view>
+                    <view class="slider-wrap">
+                        <slider bindchanging="onSliderChange" block-color="rgba(255,81,131,1)" block-size="20" activeColor="rgba(255,81,131,1)" min="0" max="200" value="{{sliderValue}}" />
+                        <view class="value">¥{{sliderValue}}W</view>
+                    </view>
+                </view>
+                <view class="filter-item-wrap">
+                    <view class="filter-item-title">套卡</view>
+                    <view class="switch-wrap">
+                        <switch bindchange="switchChange" checked="{{switchChangeData ? 'checked' : ''}}" color="rgba(255,81,131,1)" />
+                        <text wx:if="{{switchChangeData}}" class="checked">有</text>
+                        <text wx:else>无</text>
+                    </view>
+                </view>
+                <view class="filter-item-wrap">
+                    <view class="filter-item-title">优惠券</view>
+                    <view class="switch-wrap">
+                        <switch bindchange="switch2Change" checked="{{switch2ChangeData ? 'checked' : ''}}" color="rgba(255,81,131,1)" />
+                        <text wx:if="{{switch2ChangeData}}" class="checked">有</text>
+                        <text wx:else>无</text>
+                    </view>
+                </view>
+                <view class="filter-item-wrap">
+                    <view class="filter-item-title">等级</view>
+                    <view class="slider-wrap">
+                        <slider bindchanging="onSlider2Change" block-color="rgba(255,81,131,1)" block-size="20" activeColor="rgba(255,81,131,1)" min="0" max="200" value="{{sliderValue2}}" />
+                        <view class="value">{{sliderValue2}}级</view>
+                    </view>
+                </view>
+                <view class="filter-item-wrap">
+                    <view class="filter-item-title">生日</view>
+                    <view class="birthday">
+                        <text wx:for="{{birthday}}" wx:key="{{index}}" class="{{item.status == 1? 'active': ''}}" bindtap="switchBirthday" data-index="{{index}}">{{item.text}}</text>
+                    </view>
+                </view>
+                <view class="btn-reset" bindtap="resetFilter">重置筛选条件</view>
+            </view>
+        </view>
+    </view>
+    <view class="ui-dialog-bg"></view>
+</block>

@@ -1,0 +1,34 @@
+<view>
+    <navigator url="/pages/customer-list/customer-list" hover-class="none">
+        <view class="New_item">
+            <view class="New_title">客户</view>
+            <view class="New_info">请选择 ></view>
+        </view>
+    </navigator>
+    <navigator url="/pages/technician/technician" hover-class="none">
+        <view class="New_item">
+            <view class="New_title">预约技师</view>
+            <view class="New_info">{{employee[0].emp_name||'请选择'}} ></view>
+        </view>
+    </navigator>
+    <navigator url="/pages/technician/technician" hover-class="none">
+        <view class="New_item">
+            <view class="New_title">预约时长</view>
+            <view class="New_info">请选择 ></view>
+        </view>
+    </navigator>
+    <view bindtap='selectTime' class="New_item">
+        <view class="New_title">预约时间</view>
+        <view class="New_info">请选择 ></view>
+    </view>
+    <view class="New_item" bindtap='cardsBtn'>
+        <view class="New_title">预约卡项</view>
+        <view class="New_info">{{cards[0].name||'请选择'}}  ></view>
+    </view>
+    <view class="New_Text">
+        <view class="New_title">预约备注</view>
+        <textarea wx:if='{{!timeShow}}' class="textarea" auto-focus />
+    </view>
+    <view class="New_btn">提交</view>
+</view>
+<component-selecttime show='{{timeShow}}'></component-selecttime>

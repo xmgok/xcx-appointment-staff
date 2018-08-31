@@ -1,0 +1,86 @@
+@import "../../sass-utils/mix";
+
+.search {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    background:#f5f5f5;
+    padding:0 pxrem(35) pxrem(35) pxrem(35);
+    box-shadow: inset pxrem(0) pxrem(-1) pxrem(0) pxrem(0) #dddddd;
+    .value_wrap{
+        height:pxrem(82);
+        -webkit-box-flex: 1;
+        box-sizing: border-box;
+        padding: 0 pxrem(20);
+        display: -webkit-box;
+        -webkit-box-align: center;
+        background: #fff;
+        color: #aaaaaa;
+        input {
+            display: block;
+            -webkit-box-flex: 1;
+            box-sizing: border-box;
+            padding-left:pxrem(20);
+            font-size: pxrem(28);
+            line-height:pxrem(82);
+            height: pxrem(82);
+          }
+    }
+    .cancel {
+        padding-left: 15rpx;
+        color: #9e925f;
+        font-size: 28rpx;
+        margin-left: 15rpx;
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
+}
+  
+.tec_tab{
+    display: -webkit-box;
+    line-height: pxrem(106);
+    text-align: center;
+    background: #fff;
+    box-shadow: inset pxrem(0) pxrem(-1) pxrem(0) pxrem(0) #dddddd;
+    .tec_tab_li{
+        -webkit-box-flex: 1;
+        font-size: pxrem(28);
+        color: #666666;
+        &.active{
+            border-bottom: pxrem(1) solid $c3;
+            color: $c3;
+        }
+    }
+}
+
+.Fixed{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: pxrem(106);
+    z-index: 1;
+    background-color: #ffffff;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    box-shadow: 0px pxrem(4) pxrem(23) 0px rgba(0, 0, 0, 0.1);
+    .people{
+        margin-left:pxrem(36);
+        line-height:pxrem(106);
+        color:#92979b;
+        font-size: pxrem(28);
+        .number{
+            font-size:pxrem(35); 
+            color: #f96868;
+            display: inline-block;
+        }
+    }
+    .submit{
+        line-height:pxrem(106);
+        font-size:pxrem(35); 
+        padding: 0 pxrem(78);     
+        background: $c1; 
+        color: #fff;
+    }
+}

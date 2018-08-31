@@ -1,0 +1,214 @@
+page {
+  padding-bottom: 20rpx;
+  padding-top: 100rpx;
+}
+
+.tab {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  line-height: 98rpx;
+  text-align: center;
+  background: white;
+  border-bottom: 1rpx solid #dddddd;
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.tab .item {
+  -webkit-box-flex: 1;
+  width: 1%;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
+
+.tab .item.active {
+  color: #FF5183;
+}
+
+.tab .item.active text {
+  border-bottom: 2rpx solid #FF5183;
+  display: block;
+}
+
+.tab-con .c1 {
+  color: #FF5183;
+}
+
+.tab-con .c2 {
+  color: #FF5183;
+}
+
+.tab-con .c3 {
+  color: #333333;
+}
+
+.tab-con .con {
+  display: none;
+}
+
+.tab-con .con.show {
+  display: block;
+}
+
+.tab1 .list-wrap .btn, .tab3 .list-wrap .btn {
+  font-size: 24rpx;
+  line-height: 56rpx;
+  background: #FF5183;
+  color: white;
+  padding: 0 20rpx;
+  border-radius: 5rpx;
+  height: 56rpx;
+  box-shadow: 0 20rpx 40rpx 0 rgba(255, 81, 131, 0.5);
+}
+
+.tab1 .list-wrap .item, .tab3 .list-wrap .item {
+  line-height: 50rpx;
+  padding: 30rpx;
+  background: white;
+  color: #92979b;
+  margin-top: 20rpx;
+}
+
+.tab1 .list-wrap .item .time-wrap, .tab3 .list-wrap .item .time-wrap {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  padding-bottom: 24rpx;
+}
+
+.tab1 .list-wrap .item .time-wrap .status, .tab3 .list-wrap .item .time-wrap .status {
+  background: #FF5183;
+  line-height: 30rpx;
+  color: white;
+  padding: 0 12rpx;
+  font-size: 18rpx;
+  border-radius: 18rpx;
+}
+
+.tab1 .list-wrap .item .time-wrap .status.dis, .tab3 .list-wrap .item .time-wrap .status.dis {
+  background: #bbbbbb;
+}
+
+.tab1 .list-wrap .item .name-wrap, .tab3 .list-wrap .item .name-wrap {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  padding-bottom: 24rpx;
+}
+
+.tab1 .list-wrap .item .name-wrap .name text, .tab3 .list-wrap .item .name-wrap .name text {
+  color: #000000;
+  font-size: 30rpx;
+}
+
+.tab1 .list-wrap .item .ul .li text, .tab3 .list-wrap .item .ul .li text {
+  color: #333333;
+}
+
+.tab2 .item {
+  background: white;
+  margin-top: 20rpx;
+  padding: 0 30rpx 20rpx;
+  line-height: 56rpx;
+  color: #92979b;
+}
+
+.tab2 .item .user-info {
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  padding: 50rpx 30rpx;
+}
+
+.tab2 .item .user-info .name {
+  color: #333333;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: black;
+  line-height: 40rpx;
+}
+
+.tab2 .item .user-info .go-detail {
+  font-size: 22rpx;
+}
+
+.tab2 .item .num-wrap {
+  display: -webkit-box;
+  -webkit-box-align: center;
+  -webkit-box-pack: justify;
+  padding: 0 30rpx;
+  margin-bottom: 20rpx;
+  height: 140rpx;
+  background: linear-gradient(90deg, #ff4e81, #ffbd7b);
+  border-radius: 10rpx;
+  box-shadow: 0 20rpx 20rpx 0 rgba(255, 95, 128, 0.3);
+  color: white;
+  line-height: 40rpx;
+  font-size: 22rpx;
+}
+
+.tab2 .item .num-wrap text {
+  display: block;
+  font-weight: bold;
+  font-size: 30rpx;
+}
+
+.tab2 .item .num-wrap .home-num {
+  text-align: right;
+}
+
+.tab2 .item .item-info {
+  border-bottom: 1rpx solid #dddddd;
+  line-height: 90rpx;
+}
+
+.tab2 .item .item-info text {
+  color: #333333;
+}
+
+.tab2 .item .time-wrap {
+  line-height: 60rpx;
+  padding: 25rpx 0;
+  text-align: center;
+}
+
+.tab2 .item .time-wrap .time {
+  font-size: 70rpx;
+  line-height: 90rpx;
+  color: #333333;
+  font-weight: bold;
+}
+
+.tab2 .item .btn {
+  line-height: 90rpx;
+  border-radius: 90rpx;
+  text-align: center;
+  background: #5D97FF;
+  color: white;
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+  border: 1rpx solid #5D97FF;
+  box-shadow: 0 20rpx 40rpx 0 rgba(88, 138, 255, 0.5);
+}
+
+.tab2 .item .btn.dis {
+  border-color: #cccccc;
+  color: #333333;
+  background: white;
+  box-shadow: 0 0 0 0;
+}
+
+.tab2 .item .item-pro {
+  border-bottom: 1rpx solid #dddddd;
+  padding: 20rpx 0;
+}
+
+.tab2 .item .item-pro-li {
+  line-height: 66rpx;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}

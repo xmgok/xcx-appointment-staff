@@ -1,0 +1,47 @@
+@import "../../sass-utils/mix";
+.New_item{
+    padding:pxrem(50) pxrem(35);
+    margin-bottom:pxrem(22);
+    box-shadow: pxrem(0) pxrem(4) pxrem(23) pxrem(0)rgba(0, 0, 0, 0.1);
+    font-size:pxrem(28);
+    color:#92979b;
+    background: #fff;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    &:first-child{
+        box-shadow: inset pxrem(0) pxrem(1) pxrem(0) pxrem(0) #dddddd;
+    }
+}
+.New_content{
+    padding:pxrem(50) pxrem(35);
+    margin-bottom:pxrem(22);
+    box-shadow: pxrem(0) pxrem(4) pxrem(23) pxrem(0)rgba(0, 0, 0, 0.1);
+    font-size:pxrem(28);
+    color:#92979b;
+    background: #fff;
+    .New_roder{
+        display: -webkit-box;
+        -webkit-box-pack: justify;
+        line-height:pxrem(70);
+        .roder_name{
+            color: #000;
+        }
+        &.show{
+            display: block;
+        }
+        .roder_margin{
+            display: inline-block;
+            margin-right:pxrem(38);
+            color:#dc1d54;
+        }
+    }
+}
+.New_btn{
+    margin:pxrem(70) pxrem(35) 0;
+    text-align: center;
+    padding:pxrem(30);
+    font-size:pxrem(35);
+    color: #fff;
+    background:#588aff;
+    border-radius: pxrem(100);
+}

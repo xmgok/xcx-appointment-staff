@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "搜索服务",
+  "usingComponents": {
+    "component-chosen": "/component/chosen/chosen"
+}
+}

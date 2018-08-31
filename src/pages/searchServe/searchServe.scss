@@ -1,0 +1,95 @@
+@import "../../sass-utils/mix";
+@import "../../sass-utils/variables";
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+
+
+.searchServe {
+    padding-bottom: pxrem(90);
+    height: 100%;
+    .no_serve_wrap {
+        position: fixed;
+        top: pxrem(156);
+        bottom: pxrem(90);
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .img {
+            width: pxrem(240);
+            height: pxrem(254)
+        }
+    }
+    .serve_wrap {
+        .serve_content {
+            background-color: #fff;
+            &:first-child {
+                border-top: pxrem(1) solid #dddddd;
+            }
+            border-bottom:pxrem(1) solid #dddddd;
+            padding:pxrem(50);
+            .serve_main {
+                position: relative;
+                .serve_li {
+                    margin-bottom: pxrem(28);
+                    &.serve_name {
+                        font-size: pxrem(36);
+                    }
+                    &.serve_duration {
+                        color: #aaa;
+                    }
+                    &.serve_price {
+                        margin-bottom: pxrem(0);
+                        .now_price {
+                            color: $c2;
+                            display: inline-block;
+                            margin-right: pxrem(12)
+                        }
+                        .original_price {
+                            color: #aaa;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+                .icons {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%)
+                }
+            }
+        }
+    }
+    .input_wrap {
+        padding: pxrem(36);
+        .input_content {
+            position: relative;
+            .input {
+                background-color: #fff;
+                padding-right: pxrem(72);
+                height: pxrem(84);
+                border-radius: pxrem(10);
+            }
+            .icons {
+                position: absolute;
+                top: 44%;
+                right: pxrem(24);
+                transform: translateY(-50%);
+                color: #000;
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+<view class="page-detail">
+    <view class="info-wrap">
+        <view class="user-info">
+            <view class="name">张小姐</view>
+            <view class="go-detail">查看用户详情</view>
+        </view>
+        <view class="info-status">待确认</view>
+    </view>
+    <view class="num-wrap">
+        <view class="hy-num">会员号 <text>090309426</text></view>
+    </view>
+    <view class="item-info">
+        <view class="l">服务技师：</view>
+        <view class="con">龚艳丽，张小红</view>
+    </view>
+    <view class="item-info" style="display: block;">
+        <view class="l">服务清单：</view>
+        <view class="con">
+            <view class="qd-item"><view class="qd-item-l">kneipp全身精油减压护理</view><view class="qd-item-r"><text>￥0.00</text>  ×1</view></view>
+            <view class="qd-item"><view class="qd-item-l">温沙热疗护理</view><view class="qd-item-r"><text>￥299.00</text>  ×1</view></view>
+            <view class="qd-item"><view class="qd-item-l"></view><view class="qd-item-r">总计：2个服务，￥299.00</view></view>
+            <view class="qd-item"><view class="qd-item-l"></view><view class="qd-item-r">券抵扣：￥0.00</view></view>
+            <view class="qd-item"><view class="qd-item-l"></view><view class="qd-item-r">积分抵扣：￥0.00</view></view>
+            <view class="qd-item"><view class="qd-item-l"></view><view class="qd-item-r">实收金额：<text class="ui-c2">￥299.00</text></view></view>
+        </view>
+    </view>
+    <view class="item-info">
+        <view class="l">进店时间：</view>
+        <view class="con">15:30:32</view>
+    </view>
+    <view class="item-info">
+        <view class="l">开始时间：</view>
+        <view class="con">15:30:32</view>
+    </view>
+    <view class="item-info">
+        <view class="l">结束时间：</view>
+        <view class="con">15:30:32</view>
+    </view>
+    <view class="item-info">
+        <view class="l">服务床位：</view>
+        <view class="con">801</view>
+    </view>
+    <view class="item-info" style="border-bottom: 0;">
+        <view class="l">取消原因：</view>
+        <view class="con"><text class="ui-c2">不满意店员强制推销商品的做法</text></view>
+    </view>
+    <view class="step">
+        <view class="disc active"><view class="text">完成服务</view></view>
+        <view class="line active"><view class="line-j"></view></view>
+        <view class="disc cen"><view class="text">客户确认</view></view>
+        <view class="line"><view class="line-j"></view></view>
+        <view class="disc cen"><view class="text">填写日志</view></view>
+        <view class="line"><view class="line-j"></view></view>
+        <view class="disc last"><view class="text">分配业绩</view></view>
+    </view>
+    <view class="step">
+        <view class="disc"><view class="text">完成服务</view></view>
+        <view class="line"><view class="line-j"></view></view>
+        <view class="disc cen"><view class="text">客户确认</view></view>
+        <view class="line"><view class="line-j"></view></view>
+        <view class="disc cen"><view class="text">填写日志</view></view>
+        <view class="line"><view class="line-j"></view></view>
+        <view class="disc last"><view class="text">分配业绩</view></view>
+    </view>
+    <view class="btn">提醒客户确认消费</view>
+    <view class="btn btn2">分配业绩</view>
+    <view class="btn btn2">填写护理日志</view>
+</view>

@@ -1,0 +1,56 @@
+<view class="BookingAdmin">
+    <view class='booking_title_wrap'>
+        <view class="booking_title ">
+            <view class="title_date ">
+                <view class="date_month">8月</view>
+                <view class="date_day">25</view>
+            </view>
+            <view class="title_info">
+                <view class="info_margin">
+                    <view>
+                        今日有8个预约，5位客户到店
+                        <text></text>
+                    </view>
+                    <view bindtap="displayModeFun" data-val="board" class="info_icon  {{displayMode=='board'?'selected':''}}">
+                        <text class="icons icons-search"></text>
+                        看板
+                    </view>
+                </view>
+                <view class="info_icon">
+                    <view>
+                        下一位预约时间:
+                        <text class="info_text">下午2:30</text>
+                    </view>
+                    <view bindtap="displayModeFun" data-val="list" class="info_icon  {{displayMode=='list'?'selected':''}}">
+                        <text class="icons icons-search"></text>
+                        列表
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="time_wrap">
+            <view class="week_wrap ">
+                <view class="week_content " wx:for="{{weekConst}}" wx:key='{{index}}'>
+                    {{item}}
+                </view>
+            </view>
+            <scroll-view scroll-y='{{true}}' class="date_wrap clear">
+                <view class="date_content lf" bindtap="monthDatasFun" data-item="{{item}}" wx:key='{{index}}' data-index="{{index}}" wx:for="{{monthDatas}}">
+                    <view class="date_main_po {{monthSelected==index?'isSelect':''}}">
+                        <view class="date_main_ab">
+                            <text>{{item.date_day}}</text>
+                            <view class="point_wrap">
+                                <view class="point {{item.date_status==0?'is_booking':''}} {{item.date_status==1?'no_booking':''}}"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class="customer_card_wrap">
+        <component-introcard bind:bindtap='cardClick' wx:if='{{displayMode=="list"}}' datas='{{bookingData}}'></component-introcard>
+        <component-detailcard bind:bindtap='cardClick' wx:if='{{displayMode=="board"}}' datas='{{bookingData}}'></component-detailcard>
+    </view>
+    <!-- <component-selecttime></component-selecttime> -->
+</view>

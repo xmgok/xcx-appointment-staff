@@ -1,0 +1,70 @@
+.list-record {
+  padding: 0 35rpx;
+}
+
+.list-record .record-header {
+  font-size: 42rpx;
+  font-weight: 600;
+  color: #000;
+  height: 135rpx;
+  line-height: 135rpx;
+  border-bottom: 3rpx solid #ddd;
+}
+
+.list-record .content-wrap {
+  padding: 45rpx 0;
+}
+
+.list-record .list-title {
+  font-size: 28rpx;
+  padding: 0 35rpx 33rpx 0;
+  color: #000;
+  font-weight: 600;
+}
+
+.list-record .list-view {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+
+.list-record .label-item {
+  border: 1rpx solid #ccc;
+  color: #ccc;
+  font-size: 23rpx;
+  border-radius: 50rpx;
+  width: 141rpx;
+  height: 71rpx;
+  line-height: 71rpx;
+  text-align: center;
+  margin-bottom: 22rpx;
+}
+
+.list-record .label-item:not(:nth-child(4n)) {
+  margin-right: 34rpx;
+}
+
+.list-record .label-item.active {
+  border-color: #ff5183;
+  color: #ff5183;
+}
+
+.view-btn {
+  padding: 0 35rpx 54rpx;
+}
+
+.btn-submit {
+  background-color: #bbb;
+  font-size: 35rpx;
+  color: #fff;
+  box-shadow: 0 12rpx 23rpx 0 rgba(187, 187, 187, 0.5);
+  -webkit-box-shadow: 0 12rpx 23rpx 0 rgba(187, 187, 187, 0.5);
+  border-radius: 60rpx;
+  box-shadow: 0 24rpx 46rpx 0 rgba(187, 187, 187, 0.5);
+  border: none;
+}
+
+.btn-submit.can-submit {
+  background: #588aff;
+  box-shadow: 0 24rpx 46rpx 0 rgba(88, 138, 255, 0.5);
+}

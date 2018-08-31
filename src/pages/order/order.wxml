@@ -1,0 +1,242 @@
+<view class="tab">
+    <view class="item {{tabIndex == index ? 'active' : ''}}" wx:for="{{tab}}" wx:key="{{index}}" bindtap="switchTab" data-index="{{index}}">
+        <text>{{item.text}}<block wx:if="{{item.num > 0}}"> {{item.num}}</block></text>
+    </view>
+</view>
+<view class="tab-con">
+    <!--<view class="con {{tabIndex == index ? 'show' : ''}}" wx:for="{{tab}}" wx:key="{{index}}">{{index}}</view>-->
+    <view class="con {{tabIndex == 0 ? 'show' : ''}}">
+        <view class="tab1">
+            <view class="list-wrap">
+                <view class="item">
+                    <view class="time-wrap">
+                        <view class="time1">
+                            <text class="c1">15:00</text>
+                            进店
+                        </view>
+                        <view class="time2">已等待
+                            <text class="c2">30</text>
+                            分钟
+                        </view>
+                    </view>
+                    <view class="name-wrap">
+                        <view class="name">
+                            <text>马丽萍</text>
+                            613001117
+                        </view>
+                        <view class="btn" bindtap="bindShowChooseBed">进房/点单</view>
+                    </view>
+                    <view class="ul">
+                        <view class="li">预约时段：
+                            <text>10:00 - 11:30</text>
+                        </view>
+                        <view class="li">预约技师：
+                            <text>龚艳丽</text>
+                        </view>
+                        <view class="li">当前床位：</view>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="time-wrap">
+                        <view class="time1">
+                            <text class="c1">15:00</text>
+                            进店
+                        </view>
+                        <view class="time2">已等待
+                            <text class="c2">30</text>
+                            分钟
+                        </view>
+                    </view>
+                    <view class="name-wrap">
+                        <view class="name">
+                            <text>马丽萍</text>
+                            613001117
+                        </view>
+                        <view class="btn" bindtap="bindShowChooseBed">进房/点单</view>
+                    </view>
+                    <view class="ul">
+                        <view class="li">预约时段：
+                            <text>10:00 - 11:30</text>
+                        </view>
+                        <view class="li">预约技师：
+                            <text>龚艳丽</text>
+                        </view>
+                        <view class="li">当前床位：</view>
+                    </view>
+                </view>
+                <view class="item">
+                    <view class="time-wrap">
+                        <view class="time1">
+                            <text class="c1">15:00</text>
+                            进店
+                        </view>
+                        <view class="time2">已等待
+                            <text class="c2">30</text>
+                            分钟
+                        </view>
+                    </view>
+                    <view class="name-wrap">
+                        <view class="name">
+                            <text>马丽萍</text>
+                            613001117
+                        </view>
+                        <view class="btn" bindtap="bindShowChooseBed">进房/点单</view>
+                    </view>
+                    <view class="ul">
+                        <view class="li">预约时段：
+                            <text>10:00 - 11:30</text>
+                        </view>
+                        <view class="li">预约技师：
+                            <text>龚艳丽</text>
+                        </view>
+                        <view class="li">当前床位：</view>
+                    </view>
+                </view>
+            </view>
+            <component-loading></component-loading>
+            <view class="ui-no-data">暂无数据</view>
+        </view>
+    </view>
+    <view class="con {{tabIndex == 1 ? 'show' : ''}}">
+        <view class="tab2">
+            <view class="list-wrap">
+                <view class="item">
+                    <view class="user-info">
+                        <view class="name">张小姐</view>
+                        <view class="go-detail">查看用户详情</view>
+                    </view>
+                    <view class="num-wrap">
+                        <view class="hy-num">会员号 <text>090309426</text></view>
+                        <view class="home-num">房间号 <text>809</text></view>
+                    </view>
+                    <view class="item-info">服务技师：<text>龚艳丽</text></view>
+                    <view class="item-pro">
+                        <view class="item-pro-li">
+                            <view class="l">服务项目：</view>
+                            <view class="r">共<text class="ui-c5"> 2 </text>项</view>
+                        </view>
+                        <view class="item-pro-li">
+                            <view class="l c3">kneipp全身精油减压护理</view>
+                            <view class="r">￥0.00 ×1</view>
+                        </view>
+                        <view class="item-pro-li">
+                            <view class="l c3">温沙热疗护理</view>
+                            <view class="r">￥299.00 ×1</view>
+                        </view>
+                        <view class="item-pro-li">
+                            <view class="l"></view>
+                            <view class="r">总计：
+                                <text class="c2">￥299.00</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="item-info">开始时间：<text>15:30:32</text></view>
+                    <view class="time-wrap">
+                        <view class="text">剩余服务时长</view>
+                        <view class="time">00:58:03</view>
+                    </view>
+                    <view class="btn">结束服务(出房)</view>
+                    <view class="btn dis">改点单</view>
+                </view>
+            </view>
+            <component-loading></component-loading>
+            <view class="ui-no-data">暂无数据</view>
+        </view>
+    </view>
+    <view class="con {{tabIndex == 2 ? 'show' : ''}}">
+        <view class="tab3">
+            <view class="list-wrap">
+                <navigator class="item" url="/pages/order-detail/order-detail?id=3" hover-class="none">
+                    <view class="time-wrap">
+                        <view class="time1">
+                            <text class="c1">15:00</text>
+                            结束
+                        </view>
+                        <view class="status">待确认</view>
+                    </view>
+                    <view class="name-wrap">
+                        <view class="name">
+                            <text>马丽萍</text>
+                            613001117
+                        </view>
+                    </view>
+                    <view class="ul">
+                        <view class="li">服务技师：
+                            <text>龚艳丽</text>
+                        </view>
+                        <view class="li">服务项目：
+                            <text>kneipp全身精油减压护理...等2项</text>
+                        </view>
+                        <view class="li">服务床位：
+                            <text>809</text>
+                        </view>
+                        <view class="li">护理金额：
+                            <text>￥299.00</text>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="item" url="/pages/order-detail/order-detail?id=3" hover-class="none">
+                    <view class="time-wrap">
+                        <view class="time1">
+                            <text class="c1">15:00</text>
+                            结束
+                        </view>
+                        <view class="status dis">已确认</view>
+                    </view>
+                    <view class="name-wrap">
+                        <view class="name">
+                            <text>马丽萍</text>
+                            613001117
+                        </view>
+                    </view>
+                    <view class="ul">
+                        <view class="li">服务技师：
+                            <text>龚艳丽</text>
+                        </view>
+                        <view class="li">服务项目：
+                            <text>kneipp全身精油减压护理...等2项</text>
+                        </view>
+                        <view class="li">服务床位：
+                            <text>809</text>
+                        </view>
+                        <view class="li">护理金额：
+                            <text>￥299.00</text>
+                        </view>
+                    </view>
+                </navigator>
+                <navigator class="item" url="/pages/order-detail/order-detail?id=3" hover-class="none">
+                    <view class="time-wrap">
+                        <view class="time1">
+                            <text class="c1">15:00</text>
+                            结束
+                        </view>
+                        <view class="status dis">已取消</view>
+                    </view>
+                    <view class="name-wrap">
+                        <view class="name">
+                            <text>马丽萍</text>
+                            613001117
+                        </view>
+                    </view>
+                    <view class="ul">
+                        <view class="li">服务技师：
+                            <text>龚艳丽</text>
+                        </view>
+                        <view class="li">服务项目：
+                            <text>kneipp全身精油减压护理...等2项</text>
+                        </view>
+                        <view class="li">服务床位：
+                            <text>809</text>
+                        </view>
+                        <view class="li">护理金额：
+                            <text>￥299.00</text>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+            <component-loading></component-loading>
+            <view class="ui-no-data">暂无数据</view>
+        </view>
+    </view>
+</view>
+<component-chooseBed show="{{showChooseBed}}" listData="{{bedData}}" bindcancel="onCancel" bindconfirm="onConfirm"></component-chooseBed>

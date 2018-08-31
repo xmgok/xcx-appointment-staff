@@ -1,0 +1,65 @@
+@import "../../sass-utils/mix";
+.list-record {
+    padding: 0 pxrem(35);
+    .record-header {
+        font-size: pxrem(42);
+        font-weight: 600;
+        color: #000;
+        height: pxrem(135);
+        line-height: pxrem(135);
+        border-bottom: pxrem(3) solid #ddd;
+    }
+    .content-wrap {
+        padding: pxrem(45) 0;
+    }
+    .list-title {
+        font-size: pxrem(28);
+        padding: 0 pxrem(35) pxrem(33) 0;
+        color: #000;
+        font-weight: 600;
+    }
+    .list-view {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+    }
+    .label-item {
+        border: pxrem(1) solid #ccc;
+        color: #ccc;
+        font-size: pxrem(23);
+        border-radius: pxrem(50);
+        width: pxrem(141);
+        height: pxrem(71);
+        line-height: pxrem(71);
+        text-align: center;
+        margin-bottom: pxrem(22);
+        &:not(:nth-child(4n)) {
+            margin-right: pxrem(34);
+        }
+        &.active {
+            border-color: #ff5183;
+            color: #ff5183;
+        }
+    }
+}
+
+.view-btn {
+    padding: 0 pxrem(35) pxrem(54);
+}
+
+.btn-submit {
+    background-color: #bbb;
+    font-size: pxrem(35);
+    color: #fff;
+    box-shadow: 0 pxrem(12) pxrem(23) 0 rgba(187, 187, 187, 0.5);
+    -webkit-box-shadow: 0 pxrem(12) pxrem(23) 0 rgba(187, 187, 187, 0.5);
+    border-radius: pxrem(60);
+    box-shadow: 0px 12px 23px 0px 
+		rgba(187, 187, 187, 0.5);
+    border: none;
+    &.can-submit{
+        background: #588aff;
+        box-shadow: 0px 12px 23px 0px 
+		rgba(88, 138, 255, 0.5);
+    }
+}

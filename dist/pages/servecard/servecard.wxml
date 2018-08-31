@@ -1,0 +1,16 @@
+<view class="search">
+    <view class="value_wrap" bindtap='inputClick'>
+        <input disabled='{{true}}' value="{{value}}" placeholder="请输入名称/编号搜索产品" bindinput="bindKeyInput" />
+    </view>
+    <view class="cancel {{value.length > 0 ? 'show' : ''}}" bindtap="cancel">取消</view>
+</view>
+<view class="tec_tab">
+    <view class="tec_tab_li {{tabIndex==item.index?'active':''}}" data-index="{{index}}" bindtap="switchTab" wx:for="{{tabArr}}" wx:key="{{index}}">
+        {{item.name}}
+    </view>
+</view>
+<view class="sc_content">
+    <component-comboCardList bind:event='comboEvent' selectData='{{comboSelect}}' wx:if='{{tabIndex==0}}' datas='{{comboList}}'></component-comboCardList>
+    <component-serveList wx:else bind:event='serEvent' selectData='{{serSelect}}' datas='{{serList}}'></component-serveList>
+</view>
+<component-chosen datas='{{chosenData}}' bind:submit='submit' bind:event='chosenEvent'></component-chosen>

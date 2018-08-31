@@ -1,0 +1,53 @@
+.New_item {
+  padding: 50rpx 35rpx;
+  margin-bottom: 22rpx;
+  box-shadow: 0rpx 4rpx 23rpx 0rpx rgba(0, 0, 0, 0.1);
+  font-size: 28rpx;
+  color: #92979b;
+  background: #fff;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}
+
+.New_item:first-child {
+  box-shadow: inset 0rpx 1rpx 0rpx 0rpx #dddddd;
+}
+
+.New_content {
+  padding: 50rpx 35rpx;
+  margin-bottom: 22rpx;
+  box-shadow: 0rpx 4rpx 23rpx 0rpx rgba(0, 0, 0, 0.1);
+  font-size: 28rpx;
+  color: #92979b;
+  background: #fff;
+}
+
+.New_content .New_roder {
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  line-height: 70rpx;
+}
+
+.New_content .New_roder .roder_name {
+  color: #000;
+}
+
+.New_content .New_roder.show {
+  display: block;
+}
+
+.New_content .New_roder .roder_margin {
+  display: inline-block;
+  margin-right: 38rpx;
+  color: #dc1d54;
+}
+
+.New_btn {
+  margin: 70rpx 35rpx 0;
+  text-align: center;
+  padding: 30rpx;
+  font-size: 35rpx;
+  color: #fff;
+  background: #588aff;
+  border-radius: 100rpx;
+}

@@ -1,0 +1,43 @@
+.New_item {
+  padding: 40rpx 35rpx;
+  margin-bottom: 22rpx;
+  box-shadow: 0rpx 4rpx 23rpx 0rpx rgba(0, 0, 0, 0.1);
+  font-size: 28rpx;
+  color: #92979b;
+  background: #fff;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}
+
+.New_item:first-child {
+  box-shadow: inset 0rpx 1rpx 0rpx 0rpx #dddddd;
+}
+
+.New_Text {
+  padding: 35rpx;
+  box-shadow: 0rpx 4rpx 23rpx 0rpx rgba(0, 0, 0, 0.1);
+  background: #fff;
+  font-size: 28rpx;
+  color: #92979b;
+  display: flex;
+}
+
+.New_Text .textarea {
+  flex: 1;
+  resize: none;
+  height: 130rpx;
+  border: solid 2rpx #cccccc;
+  margin-left: 22rpx;
+  padding: 12rpx;
+  box-sizing: border-box;
+}
+
+.New_btn {
+  margin: 58rpx 35rpx 0;
+  text-align: center;
+  padding: 30rpx;
+  font-size: 35rpx;
+  color: #fff;
+  background: #588aff;
+  border-radius: 100rpx;
+}

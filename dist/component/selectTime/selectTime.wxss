@@ -1,0 +1,135 @@
+.selectTime {
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.selectTime .select_time_content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+.selectTime .select_time_content .select_time_title {
+  padding: 0 30rpx;
+  background-color: #f5f5f5;
+  line-height: 120rpx;
+  text-align: center;
+  font-size: 34rpx;
+}
+
+.selectTime .select_time_content .select_time_title .sure_btn {
+  color: #2c67f2;
+  font-size: 28rpx;
+}
+
+.selectTime .select_time_content .select_time_title .cancle_btn {
+  color: #92979b;
+  font-size: 28rpx;
+}
+
+.selectTime .select_time_content .steps_wrap .steps_item {
+  width: 16.66%;
+  text-align: center;
+  padding: 22rpx 0;
+  position: relative;
+}
+
+.selectTime .select_time_content .steps_wrap .steps_item.line_del {
+  text-decoration: line-through;
+  color: #cccccc;
+}
+
+.selectTime .select_time_content .steps_wrap .steps_item.bookable {
+  color: #FF5183;
+}
+
+.selectTime .select_time_content .steps_wrap .steps_item.haveabout {
+  color: #92979b;
+}
+
+.selectTime .select_time_content .steps_wrap .steps_item .middle_bg {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  right: 0;
+  padding: 18rpx 0;
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.selectTime .select_time_content .steps_wrap .steps_item .middle_bg.steps_middle {
+  background-color: rgba(255, 81, 131, 0.2);
+}
+
+.selectTime .select_time_content .steps_wrap .steps_item .middle_bg.first_steps_middle {
+  width: 25%;
+  background-color: rgba(255, 81, 131, 0.2);
+}
+
+.selectTime .select_time_content .steps_wrap .steps_item .middle_bg.last_steps_middle {
+  width: 25%;
+  left: 0;
+  background-color: rgba(255, 81, 131, 0.2);
+}
+
+.selectTime .select_time_content .steps_wrap .steps_item .steps_text {
+  margin: 0 6rpx;
+  border-radius: 50rpx;
+  padding: 8rpx 0;
+}
+
+.selectTime .select_time_content .steps_wrap .steps_item .steps_text.select {
+  background-color: #FF5183;
+  color: #fff;
+}
+
+.selectTime .select_time_content .week_wrap {
+  display: flex;
+}
+
+.selectTime .select_time_content .week_wrap .week_item {
+  padding: 32rpx 0;
+  flex: 1;
+  text-align: center;
+}
+
+.selectTime .select_time_content .week_wrap .week_item .week_text {
+  font-size: 24rpx;
+}
+
+.selectTime .select_time_content .week_wrap .week_item .week_day {
+  font-size: 18rpx;
+  color: #92979b;
+}
+
+.selectTime .select_time_content .week_wrap .week_item.selected {
+  color: #FF5183;
+}
+
+.selectTime .select_time_content .week_wrap .week_item.selected .week_day {
+  color: #FF5183;
+}
+
+.selectTime textarea {
+  z-index: -1;
+}
+
+.lf {
+  float: left;
+}
+
+.rt {
+  float: right;
+}
+
+.clear::after {
+  content: '';
+  display: block;
+  clear: both;
+}

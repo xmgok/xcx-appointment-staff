@@ -1,0 +1,130 @@
+@import "../../sass-utils/mix";
+@import "../../sass-utils/variables";
+page {
+    padding-bottom: pxrem(20);
+}
+.tec_tab {
+    display: flex;
+    line-height: pxrem(106);
+    text-align: center;
+    background: #fff;
+    position: relative;
+    box-shadow: inset pxrem(0) pxrem(-1) pxrem(0) pxrem(0) #dddddd;
+    .before{
+        height: pxrem(4);
+        background: transparent;
+        &.LShift{
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            right:66.6667%;
+            -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+            transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+        }
+        &.center{
+            position: absolute;
+            bottom: 0;
+            left: 33.333%;
+            right: 33.333%;
+            -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+            transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+        }
+        &.RShift{
+            position: absolute;
+            bottom: 0;
+            left:66.6667%;
+            right: 0;
+            -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
+            transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
+        }
+        .element{
+            display:block;
+            margin: 0 auto;
+            height: 100%;
+            background:#ff5183;
+        }
+    }
+    .tec_tab_li {
+        flex: 1;
+        font-size: pxrem(28);
+        color: #666666;
+        &.active {
+            color: #ff5183;
+        }
+    }
+}
+
+.no_technician {
+    text-align: center;
+    color: #aaa;
+}
+
+.employees {
+    padding: pxrem(40) pxrem(35);
+    margin-bottom: pxrem(12);
+    background: #fff; 
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    .inline_block {
+        display: inline-block;
+        font-size: pxrem(28);
+    }
+    .emp_name {
+        color: #000000;
+        margin-right: pxrem(16);
+    }
+    .emp_code {
+        color: #92979b;
+        margin-right: pxrem(16);
+    }
+    .bookable {
+        background-color: $c1;
+    }
+    .no_bookable {
+        background-color: #cccccc;
+    }
+    .belonger {
+        background-color: $c3;
+    }
+    .state {
+        padding: pxrem(4) pxrem(8);
+        border-radius: pxrem(6);
+        color: #fff;
+        margin-right: pxrem(12);
+    }
+    .checked{
+        width:pxrem(48);
+	    height:pxrem(48);
+    }
+}
+
+.Fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: pxrem(106);
+    z-index: 1;
+    background-color: #ffffff;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    box-shadow: 0px pxrem(4) pxrem(23) 0px rgba(0, 0, 0, 0.1);
+    .people {
+        margin-left: pxrem(36);
+        line-height: pxrem(106);
+        color: #92979b;
+        font-size: pxrem(28);
+        .number {
+            font-size: pxrem(35);
+            color: #f96868;
+            display: inline-block;
+        }
+    }
+    .submit {
+        line-height: pxrem(106);
+        font-size: pxrem(35);
+        padding: 0 pxrem(78);
+        background: $c1;
+        color: #fff;
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "选择服务技师",
+    "usingComponents": {
+        "component-loading": "/component/loading/loading"
+    }
+}

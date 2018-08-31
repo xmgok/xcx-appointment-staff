@@ -1,0 +1,93 @@
+@import "../../sass-utils/mix";
+@import "../../sass-utils/variables";
+.customer_card_wrap {
+    padding-top: pxrem(24);
+    .customer_card {
+        background-color: #fff;
+        margin-bottom: pxrem(24);
+        box-shadow: 0px pxrem(4) pxrem(23) #efefef;
+        padding: pxrem(58) pxrem(30);
+        .cust_content {
+            position: relative;
+            &.no_confirmed {
+                .icons {
+                    color: $c3;
+                }
+                .time_text {
+                    color: $c3;
+                }
+                .status_btn {
+                    background-color: $c3;
+                }
+            }
+            &.confirmed {
+                .icons {
+                    color: #16ba5a;
+                }
+                .time_text {
+                    color: #16ba5a;
+                }
+                .status_btn {
+                    background-color: #16ba5a;
+                }
+            }
+            &.completed {
+                .arrive_time {
+                    .icons {
+                        color: #bbbbbb;
+                    }
+                    .time_text {
+                        color: #bbbbbb;
+                    }
+                }
+                .status_btn {
+                    background-color: #bbbbbb;
+                }
+            }
+            .status_btn {
+                color: #fff;
+                border-radius: 50px;
+                display: inline-block;
+                padding: pxrem(8) pxrem(16);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            .cust_ul {
+                .booking_duration {
+                    margin-bottom: pxrem(30);
+                    display: flex;
+                    justify-content: flex-start;
+                    .icons {
+                        color: $c1;
+                    }
+                    .booking_title {
+                        color: #aaa;
+                    }
+                    .booking_text {}
+                    &.arrive_time {
+                        color: #aaa;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &.booking_item {
+                        color: #aaa;
+                    }
+                    &.cust_name {
+                        font-size: pxrem(38);
+                        margin-bottom: pxrem(30);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}

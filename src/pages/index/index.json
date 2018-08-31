@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "component-loading": "/component/loading/loading",
+    "component-navigation": "/component/navigation/navigation"
+  }
+}

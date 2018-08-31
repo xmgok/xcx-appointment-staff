@@ -1,0 +1,45 @@
+<view class="navigation-wrap"></view>
+<view class="navigation">
+    <view class="list-wrap">
+        <view class="item {{navIndex == 1 ? 'active' : ''}}">
+            <text class="icons icons-4"></text>
+        </view>
+        <navigator class="item {{navIndex == 2 ? 'active' : ''}}" url="/pages/customer-list/customer-list?type=3" hover-class="none">
+            <text class="icons icons-11"></text>
+            <view class="num">3</view>
+        </navigator>
+    </view>
+    <view class="more-wrap">
+        <view class="img-wrap" bindtap="changeMoreList">
+            <image mode="aspectFit" wx:if="{{!moreList}}" src="/images/nav/more.png"></image>
+            <image mode="aspectFit" wx:if="{{moreList}}" src="/images/nav/close.png"></image>
+        </view>
+        <view class="more-list" wx:if="{{moreList}}">
+            <navigator class="item" url="/pages/newbooking/newbooking" hover-class="none" bindtap="changeMoreList">
+                <text class="tb icons icons-3"></text>
+                <text>新预约</text>
+            </navigator>
+            <navigator class="item" url="/pages/neworder/neworder" hover-class="none" bindtap="changeMoreList">
+                <text class="tb icons icons-2"></text>
+                <text>新点单</text>
+            </navigator>
+            <navigator class="item" url="/pages/filllog/filllog" hover-class="none" bindtap="changeMoreList">
+                <text class="tb icons icons-5"></text>
+                <text>填日志</text>
+            </navigator>
+            <navigator class="item" url="/pages/resultsallot/resultsallot" hover-class="none" bindtap="changeMoreList">
+                <text class="tb icons icons-7"></text>
+                <text>分业绩</text>
+            </navigator>
+        </view>
+    </view>
+    <view class="list-wrap">
+        <navigator class="item {{navIndex == 3 ? 'active' : ''}}" url="/pages/rankings/rankings" hover-class="none">
+            <text class="icons icons-8"></text>
+        </navigator>
+        <view class="item {{navIndex == 4 ? 'active' : ''}}">
+            <text class="icons icons-1"></text>
+        </view>
+    </view>
+</view>
+<view class="navigation-bg" wx:if="{{moreList}}"></view>

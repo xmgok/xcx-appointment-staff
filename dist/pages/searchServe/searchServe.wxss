@@ -1,0 +1,105 @@
+.lf {
+  float: left;
+}
+
+.rt {
+  float: right;
+}
+
+.clear::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+.searchServe {
+  padding-bottom: 90rpx;
+  height: 100%;
+}
+
+.searchServe .no_serve_wrap {
+  position: fixed;
+  top: 156rpx;
+  bottom: 90rpx;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchServe .no_serve_wrap .img {
+  width: 240rpx;
+  height: 254rpx;
+}
+
+.searchServe .serve_wrap .serve_content {
+  background-color: #fff;
+  border-bottom: 1rpx solid #dddddd;
+  padding: 50rpx;
+}
+
+.searchServe .serve_wrap .serve_content:first-child {
+  border-top: 1rpx solid #dddddd;
+}
+
+.searchServe .serve_wrap .serve_content .serve_main {
+  position: relative;
+}
+
+.searchServe .serve_wrap .serve_content .serve_main .serve_li {
+  margin-bottom: 28rpx;
+}
+
+.searchServe .serve_wrap .serve_content .serve_main .serve_li.serve_name {
+  font-size: 36rpx;
+}
+
+.searchServe .serve_wrap .serve_content .serve_main .serve_li.serve_duration {
+  color: #aaa;
+}
+
+.searchServe .serve_wrap .serve_content .serve_main .serve_li.serve_price {
+  margin-bottom: 0rpx;
+}
+
+.searchServe .serve_wrap .serve_content .serve_main .serve_li.serve_price .now_price {
+  color: #f96868;
+  display: inline-block;
+  margin-right: 12rpx;
+}
+
+.searchServe .serve_wrap .serve_content .serve_main .serve_li.serve_price .original_price {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+.searchServe .serve_wrap .serve_content .serve_main .icons {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.searchServe .input_wrap {
+  padding: 36rpx;
+}
+
+.searchServe .input_wrap .input_content {
+  position: relative;
+}
+
+.searchServe .input_wrap .input_content .input {
+  background-color: #fff;
+  padding-right: 72rpx;
+  height: 84rpx;
+  border-radius: 10rpx;
+}
+
+.searchServe .input_wrap .input_content .icons {
+  position: absolute;
+  top: 44%;
+  right: 24rpx;
+  transform: translateY(-50%);
+  color: #000;
+}

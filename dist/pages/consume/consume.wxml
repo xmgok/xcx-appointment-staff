@@ -1,0 +1,29 @@
+<view class="consume" wx:for="{{conntent}}" wx:key="{{index}}">
+    <view class="total_text">{{item.productname}}</view>
+    <view class="amount_total">
+        ￥<view class="total_amount">{{item.totalamount}}</view>
+        <view class="amount_divide" wx:if="{{states==0}}"  data-index="{{index}}" bindtap="resultsbind">平分</view>
+    </view>
+    <view class="tabtitle">
+        <view class="tabtitle_li" wx:for="{{tabtitle}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+    <view class="employees" wx:for="{{item.employees}}" wx:for-item="Item" wx:for-index="Index" wx:key="{{Index}}">
+        <view class="employees_li">
+            <image class="clear" data-index="{{[index,Index]}}" bindtap="clearbind" wx:if="{{states==0&&Item.amount&&Item.percent&&isshow}}" src="../../images/results/del.png" />
+            <view class="emp_name">{{Item.emp_name}}</view>
+            <view class="emp_code">{{Item.emp_code}}</view>
+        </view>
+        <view class="employees_li">
+            <view class="amount">￥</view>
+            <input wx:if="{{states==0}}" value="{{Item.amount}}" data-index="{{[index,Index]}}" bindfocus="bindfocus" bindblur="amountbindblur"/>
+            <view class="seeamount" wx:else>{{Item.amount}}</view>
+        </view>
+        <view class="employees_li">
+            <input wx:if="{{states==0}}" value="{{Item.percent}}" data-index="{{[index,Index]}}" bindfocus="bindfocus"  bindblur="percentbindblur"/>
+            <view wx:else class="seepercent">{{Item.percent}}</view>
+            <view class="percent">%</view>
+        </view>
+    </view>
+    <view class="already">已分配：<view class="amount">￥{{'998'}}</view></view>
+</view>
+<view class="callot_btn" wx:if="{{states==0}}" bindtap="submit">分配</view>

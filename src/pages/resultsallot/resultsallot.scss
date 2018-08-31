@@ -1,0 +1,112 @@
+@import "../../sass-utils/mix";
+page {
+    padding-bottom: pxrem(20);
+}
+.tec_tab{
+    display:flex;
+    line-height: pxrem(106);
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin-bottom:pxrem(22);
+    .before{
+        height: pxrem(4);
+        background: transparent;
+        &.LShift{
+            position: absolute;
+            bottom: 0;
+            left: 0%;
+            right: 50%;
+            transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+        }
+        &.RShift{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            right: 0;
+            transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
+        }
+        .element{
+            display:block;
+            margin: 0 auto;
+            height: 100%;
+            background:#ff5183;
+        }
+    }
+    .tec_tab_li{
+        flex: 1;
+        font-size: pxrem(28);
+        color: #666666;
+        &.active{
+            color:#dc1d54;
+        }
+    }
+}
+.results_li{
+    padding:pxrem(60) pxrem(35);
+    background: #fff;
+    margin-bottom:pxrem(22);
+    .results_amount{
+        display: flex;
+        display: -webkit-box;
+        -webkit-box-pack: justify;
+        font-size: pxrem(25);
+        margin-bottom:pxrem(42);
+        color:#92979b;
+        .amount{
+            display: inline-block;
+            color:#dc1d54;
+        }
+    }
+    .results_cust{
+        display: flex;
+        display: -webkit-box;
+        -webkit-box-pack: justify;
+        margin-bottom:pxrem(40);
+        .cust_name{
+            font-size: pxrem(35);
+            color: #000;
+            padding:pxrem(10) 0;
+            .cust_code{
+                display: inline-block;
+                font-size:pxrem(28);
+                color: #92979b;
+            }
+        }
+        .results_btn{
+            border-radius: pxrem(6);
+            font-size:pxrem(28);
+            color: #fff;
+            padding:0 pxrem(26);
+            line-height:pxrem(66);
+            height:pxrem(66);
+            &.colorRed{
+                background:#ff5183;
+	            box-shadow: 0px pxrem(12)  pxrem(23) 0px rgba(255, 81, 131, 0.5);
+            }
+            &.colorBlue{
+                background:#588aff;
+                box-shadow: 0px pxrem(12)  pxrem(23) 0px rgba(88, 138, 255, 0.5);
+            }
+        }
+    }
+    .results_server{
+        font-size: pxrem(25);
+        color: #92979b;
+        display: flex;
+        display: -webkit-box;
+        line-height:pxrem(60); 
+        .server_text{
+            width: 20%;
+            text-align: right;
+        }
+        .server_content{
+            flex: 1;
+            font-size: pxrem(25);
+            color: #333333;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+    }
+}

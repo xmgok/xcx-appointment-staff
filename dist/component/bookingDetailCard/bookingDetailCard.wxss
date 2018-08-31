@@ -1,0 +1,99 @@
+.customer_card_wrap {
+  padding-top: 24rpx;
+}
+
+.customer_card_wrap .customer_card {
+  background-color: #fff;
+  margin-bottom: 24rpx;
+  box-shadow: 0 4rpx 23rpx #efefef;
+  padding: 58rpx 30rpx;
+}
+
+.customer_card_wrap .customer_card .cust_content {
+  position: relative;
+}
+
+.customer_card_wrap .customer_card .cust_content.no_confirmed .icons {
+  color: #FF5183;
+}
+
+.customer_card_wrap .customer_card .cust_content.no_confirmed .time_text {
+  color: #FF5183;
+}
+
+.customer_card_wrap .customer_card .cust_content.no_confirmed .status_btn {
+  background-color: #FF5183;
+}
+
+.customer_card_wrap .customer_card .cust_content.confirmed .icons {
+  color: #16ba5a;
+}
+
+.customer_card_wrap .customer_card .cust_content.confirmed .time_text {
+  color: #16ba5a;
+}
+
+.customer_card_wrap .customer_card .cust_content.confirmed .status_btn {
+  background-color: #16ba5a;
+}
+
+.customer_card_wrap .customer_card .cust_content.completed .arrive_time .icons {
+  color: #bbbbbb;
+}
+
+.customer_card_wrap .customer_card .cust_content.completed .arrive_time .time_text {
+  color: #bbbbbb;
+}
+
+.customer_card_wrap .customer_card .cust_content.completed .status_btn {
+  background-color: #bbbbbb;
+}
+
+.customer_card_wrap .customer_card .cust_content .status_btn {
+  color: #fff;
+  border-radius: 100rpx;
+  display: inline-block;
+  padding: 8rpx 16rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.customer_card_wrap .customer_card .cust_content .cust_ul .booking_duration {
+  margin-bottom: 30rpx;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.customer_card_wrap .customer_card .cust_content .cust_ul .booking_duration .icons {
+  color: #5D97FF;
+}
+
+.customer_card_wrap .customer_card .cust_content .cust_ul .booking_duration .booking_title {
+  color: #aaa;
+}
+
+.customer_card_wrap .customer_card .cust_content .cust_ul .booking_duration.arrive_time {
+  color: #aaa;
+}
+
+.customer_card_wrap .customer_card .cust_content .cust_ul .booking_duration:last-child {
+  margin-bottom: 0;
+}
+
+.customer_card_wrap .customer_card .cust_content .cust_ul .booking_duration.booking_item {
+  color: #aaa;
+}
+
+.customer_card_wrap .customer_card .cust_content .cust_ul .booking_duration.cust_name {
+  font-size: 38rpx;
+  margin-bottom: 30rpx;
+}
+
+.lf {
+  float: left;
+}
+
+.rt {
+  float: right;
+}

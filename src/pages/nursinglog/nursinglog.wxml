@@ -1,0 +1,33 @@
+<view class="page-nursinglog-view">
+    <view class="nursinglog-view-item" wx:for="{{dataList}}" wx:key="{{index}}">
+        <view class="item-top">
+            <view class="left">{{item.vipname}}<text class="subinfo">({{item.vipnum}})</text></view>
+            <view class="btn btn-fill" data-id="{{index}}" bindtap="toFilllog">立即填写</view>
+        </view>
+        <view class="log-info-item">
+            <text class="info-label">服务时间：</text>
+            <view class="info">{{item.time}}</view>
+        </view>
+        <view class="log-info-item">
+            <text class="info-label">服务技师：</text>
+            <view class="info">{{item.servicePerson}}</view>
+        </view>
+        <view class="log-info-item">
+            <text class="info-label">服务项目：</text>
+            <view class="info">
+                <view class="des">{{item.serviceItem}}</view>
+                <view class="service-num">
+                     等<text>{{item.serviceCount}}</text>项
+                </view>
+            </view>
+        </view>
+        <view class="log-info-item">
+            <text class="info-label">服务床位：</text>
+            <view class="info">{{item.bednum}}</view>
+        </view>
+        <view class="log-info-item">
+            <text class="info-label">护理金额：</text>
+            <view class="info">￥{{item.total}}</view>
+        </view>
+    </view>
+</view>

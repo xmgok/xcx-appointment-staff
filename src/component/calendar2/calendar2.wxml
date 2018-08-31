@@ -1,0 +1,32 @@
+<block wx:if='{{show}}'>
+    <view class='calendar_wrap'>
+        <view class='calendar_content'>
+            <view class="calendar_title">
+                <view class="cancle_btn" bindtap="cancel">取消</view>
+                <view class="title">选择周查看</view>
+                <view bindtap='confirm' class="sure_btn">确定</view>
+            </view>
+            <view class='date-show'>
+                <view class='arrow' bindtap='lastMonth'>《</view>
+                <view class="text">{{year}}年{{month}}月</view>
+                <view class='arrow' bindtap='nextMonth'>》</view>
+            </view>
+            <view class='header'>
+                <view wx:for='{{date}}' wx:key="{{index}}">{{item}}</view>
+            </view>
+            <view class="sdfsdf">
+                <view wx:for="{{dateArr}}" class='item {{isToday == item.isToday ? "nowDay" : ""}}' data-date='{{item.isToday}}' wx:key="{{index}}" bindtap="chooseWeek">
+                    <view class="num {{item.status > 1 ? 'num2' : ''}}">{{item.dateNum}}</view>
+                    <block wx:if="{{item.status == 2}}">
+                        <view class="bg bg2"></view>
+                    </block>
+                    <block wx:if="{{item.status == 3}}">
+                        <view class="bg bg3"></view>
+                    </block>
+                    <view class="bg" wx:if="{{item.status == 1}}"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="wx-bg"></view>
+</block>

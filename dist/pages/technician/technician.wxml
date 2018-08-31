@@ -1,0 +1,23 @@
+<view class="tec_tab">
+    <view class="before {{tabIndex==0&&'LShift'||tabIndex==1&&'center'||tabIndex==2&&'RShift'}}"><text class="element" style="width:{{width}}"></text></view>
+    <view class="tec_tab_li {{tabIndex==index?'active':''}}" data-index="{{index}}" bindtap="switchTab" wx:for="{{staffs}}" wx:key="{{index}}">
+        <text class="{{'switch'+index}}">{{item.nane}}</text>
+    </view>
+</view>
+<view class="employees" wx:for="{{employees}}" wx:key="{{index}}">
+    <view>
+        <view class="inline_block emp_name">{{item.emp_name}}</view>
+        <view class="inline_block emp_code">({{item.emp_code}})</view>
+        <view wx:if='{{item.state==1}}' class="inline_block state belonger">归属美容师</view>
+        <view class="inline_block state {{item.state==0?'bookable':'no_bookable'}}">
+            {{item.state==0&&'空闲'||item.state==1&&'非空闲'}}
+        </view>
+    </view>
+    <image class="checked" bindtap="checkBox" data-index="{{index}}" data-item="{{item}}" src="{{item.checked?'../../images/technician/checked.png':'../../images/technician/uncheckend.png'}}" />
+</view>
+<view class='no_technician'>没有更多技师了</view>
+<component-loading></component-loading>
+<view class="Fixed">
+    <view class="people">已选择：<view class="number">{{employee.length}}</view> 人</view>
+    <view class="submit" bindtap="submit">选好了</view>
+</view>

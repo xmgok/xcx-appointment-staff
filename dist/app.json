@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/order/order",
+    "pages/newbooking/newbooking",
+    "pages/bookinginfo/bookinginfo",
+    "pages/bookingManagement/bookingManagement",
+    "pages/order-detail/order-detail",
+    "pages/neworder/neworder",
+    "pages/technician/technician",
+    "pages/servecard/servecard",
+    "pages/card/card",
+    "pages/searchServe/searchServe",
+    "pages/customer-list/customer-list",
+    "pages/nursinglog/nursinglog",
+    "pages/filllog/filllog",
+    "pages/calendar/calendar",
+    "pages/resultsallot/resultsallot",
+    "pages/collection/collection",
+    "pages/editBooking/editBooking",
+    "pages/consume/consume",
+    "pages/customerDetail/customerDetail",
+    "pages/editCustomeLabel/editCustomeLabel",
+    "pages/editCustomeNote/editCustomeNote",
+    "pages/server_card_coupon/server_card_coupon",
+    "pages/rankings/rankings"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f5f5f5",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  }
+}

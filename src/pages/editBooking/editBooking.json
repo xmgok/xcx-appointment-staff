@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "新增预约",
+    "usingComponents": {
+        "component-selecttime": "/component/selectTime/selectTime"
+    }
+}

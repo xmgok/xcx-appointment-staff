@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "服务工单",
+  "usingComponents": {
+    "component-loading": "/component/loading/loading",
+    "component-chooseBed": "/component/chooseBed/chooseBed"
+  }
+}

@@ -1,0 +1,100 @@
+<view class="fixed-wrap">
+    <view class="tab">
+        <view class="item {{tabIndex == index ? 'active' : ''}}" wx:for="{{tab}}" wx:key="{{index}}" bindtap="switchTab"
+              data-index="{{index}}">
+            <text>{{item}}</text>
+        </view>
+    </view>
+    <view class="date-wrap">
+        <picker mode="date" data-index="0" class="item {{dateIndex == 0 ? 'active' : ''}}" end="{{day}}" bindchange="bindDayChange">
+            <view class="text">
+                <view>日</view>
+                <view class="arrow"></view>
+            </view>
+            <view class="choose-text">{{day}}</view>
+        </picker>
+        <view class="item {{dateIndex == 1 ? 'active' : ''}}" data-index="1" bindtap="showChooseWeek">
+            <view class="text">
+                <view>周</view>
+                <view class="arrow"></view>
+            </view>
+            <view class="choose-text" wx:if="{{week.length <= 0}}">本周</view>
+            <view class="choose-text" wx:if="{{week.length >0}}">{{week[0]}}-{{week[week.length -1]}}</view>
+        </view>
+        <picker mode="date" data-index="2" class="item {{dateIndex == 2 ? 'active' : ''}}" fields="month" end="{{maxMonth}}" bindchange="bindMonthChange">
+            <view class="text">
+                <view>月</view>
+                <view class="arrow"></view>
+            </view>
+            <view class="choose-text">{{month}}</view>
+        </picker>
+        <picker class="item {{dateIndex == 3 ? 'active' : ''}}" data-index="3" mode="multiSelector" range="{{quarter}}" value="{{quarterValue}}" bindchange="bindQuarterChange">
+            <view class="text">
+                <view>季</view>
+                <view class="arrow"></view>
+            </view>
+            <view class="choose-text" wx:if="{{quarterValue.length > 0}}">{{quarter[0][quarterValue[0]]}}年{{quarter[1][quarterValue[1]]}}</view>
+            <view class="choose-text" wx:else>本季</view>
+        </picker>
+    </view>
+    <view class="list-wrap">
+        <view class="item-l">
+            <view class="item item-title">
+                <view class="num">排名</view>
+                <view class="name" style="border-right: 1rpx solid rgba(155, 13, 54, 1);">姓名</view>
+            </view>
+        </view>
+        <block wx:if="{{tabItem[tabIndex].length > 3}}">
+            <scroll-view class="item-con" style="background: rgba(255,81,131,1);" scroll-x scroll-left="{{scrollLeft}}"
+                         bindscroll="onScroll" style="width: 100%;">
+                <view class="item item-title" style="width: {{tabItem[tabIndex].length*140+20}}rpx">
+                    <view class="text" wx:for="{{tabItem[tabIndex]}}" wx:key="{{index}}">{{item.text}}</view>
+                </view>
+            </scroll-view>
+        </block>
+        <block wx:else>
+            <view class="item-con" style="background: rgba(255,81,131,1);" style="width: 100%;">
+                <view class="item item-title">
+                    <view class="text text22" wx:for="{{tabItem[tabIndex]}}" wx:key="{{index}}">{{item.text}}</view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
+
+<view class="list-wrap">
+    <view class="item-l">
+        <view class="item" wx:for="{{listData}}" wx:key="{{index}}">
+            <view class="num">
+                <text>{{index+1}}</text>
+            </view>
+            <view class="name">{{item.name}}</view>
+        </view>
+    </view>
+    <block wx:if="{{tabItem[tabIndex].length > 3}}">
+        <scroll-view class="item-con" scroll-x scroll-left="{{scrollLeft}}" bindscroll="onScroll" style="width: 100%;">
+            <view class="item" wx:for="{{listData}}" wx:key="{{index}}"
+                  style="width: {{tabItem[tabIndex].length*140+20}}rpx">
+                <view class="text" wx:for="{{tabItem[tabIndex]}}" wx:for-item="itemItem" wx:key="itemItem">
+                    {{item[itemItem.params]}}
+                </view>
+            </view>
+        </scroll-view>
+    </block>
+    <block wx:else>
+        <view class="item-con">
+            <view class="item" wx:for="{{listData}}" wx:key="{{index}}">
+                <view class="text text22" wx:for="{{tabItem[tabIndex]}}" wx:for-item="itemItem" wx:key="itemItem">
+                    {{item[itemItem.params]}}
+                </view>
+            </view>
+        </view>
+    </block>
+</view>
+
+<view class="fixed-my-rank">
+    <view class="num">20</view>
+    <view class="text">我的排名</view>
+</view>
+
+<component-calendarxx show="{{showCalendar}}" bindcancel="calendarCancel" bindconfirm="calendarConfirm" week="{{week}}"></component-calendarxx>

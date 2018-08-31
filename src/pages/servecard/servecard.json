@@ -1,0 +1,9 @@
+{
+    "navigationBarTitleText": "选择服务卡项",
+    "usingComponents": {
+        "component-comboCardList": "/component/comboCardList/comboCardList",
+        "component-serveList": "/component/serveList/serveList",
+        "component-chosen": "/component/chosen/chosen"
+    }
+
+}

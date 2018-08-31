@@ -1,0 +1,44 @@
+<view class="customer_card_wrap">
+    <view class="customer_card" wx:for='{{datas}}' data-item='{{item}}' data-index='{{index}}' wx:key="index" bindtap="cardClick">
+        <view class="cust_content {{item.status==0?'completed':''}} {{item.status==1?'confirmed':''}} {{item.status==2?'no_confirmed':''}}">
+            <view class="cust_ul ">
+                <view class="arrive_time booking_duration">
+                    <view class="icons icons-search"></view>
+                    预约
+                    <text class="time_text">{{ item.arrive_time }}</text>
+                    到店
+                </view>
+                <view class="cust_name booking_duration">{{item.cust_name}}</view>
+                <view class="booking_duration ">
+                    <view class=" booking_title">预约时长：</view>
+                    <view class='booking_text'>{{item.duration}}</view>
+                </view>
+                <view class="booking_duration ">
+                    <view class=" booking_title">预约卡项：</view>
+                    <view class='booking_text'>{{item.Items[0].serv_name}}</view>
+                </view>
+                <view class="booking_duration ">
+                    <view class=" booking_title">预约技师：</view>
+                    <view class='booking_text'>
+                        <view wx:for='item.emps' wx:if='{{item.emps}}' wx:for-index="idx" wx:for-item="val" wx:key='idx'>
+                            {{val.emp_name}},
+                        </view>
+                    </view>
+                </view>
+                <view class="booking_duration ">
+                    <view class=" booking_title">顾客备注：</view>
+                    <view class='booking_text'>{{item.cust_memos}}</view>
+                </view>
+                <view class="booking_duration ">
+                    <view class=" booking_title">门店备注：</view>
+                    <view class='booking_text'>{{item.store_memos}}</view>
+                </view>
+            </view>
+            <view class="status_btn">
+                <text wx:if="{{item.status==0}}">已完成</text>
+                <text wx:elif="{{item.status==1}}">已确定</text>
+                <text wx:elif="{{item.status==2}}">待确定</text>
+            </view>
+        </view>
+    </view>
+</view>

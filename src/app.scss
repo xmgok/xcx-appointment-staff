@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+@import "./sass-utils/mix";
+@import "./sass-utils/ui";
+
+page {
+  color: #000000;
+  background: #f5f5f5;
+  font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: rpx2(12);
+}
+
+.tc {
+  text-align: center;
+}
+
+.pt10 {
+  padding-top: rpx2(10);
+}
+
+.p20 {
+  padding: rpx2(20);
+}
+
+.pt50 {
+  padding-top: rpx2(50);
+}
+
+.pl20 {
+  padding-left: rpx2(20);
+}
+
+.pr20 {
+  padding-right: rpx2(20);
+}
+
+.pb5 {
+  padding-bottom: rpx2(5);
+}
+
+.pb10 {
+  padding-bottom: rpx2(10);
+}
+
+.pb15 {
+  padding-bottom: rpx2(15);
+}
+
+.pb20 {
+  padding-bottom: rpx2(20);
+}
+
+.mb5 {
+  margin-bottom: rpx2(5);
+}
+
+.mb10 {
+  margin-bottom: rpx2(10);
+}
+
+.mt10 {
+  margin-top: rpx2(10);
+}
+
+.mt20 {
+  margin-top: rpx2(20);
+}
+
+image {
+  display: block;
+}

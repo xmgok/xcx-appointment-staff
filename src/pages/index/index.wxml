@@ -1,0 +1,113 @@
+
+<view class="page-index">
+    <view class="user-header hd">
+        <view class="pic-wrap">
+            <image class="user-img" mode="aspectFit" src="/images/del/pic.png"></image>
+            <view class="name"><text>邱海连</text>，{{welcoming}}</view>
+        </view>
+        <view class="rank"><text>今日总业绩</text><text class="text">NO. 10</text></view>
+        <view class="num ui-font-pf-sem">¥ <text>3,718.00</text></view>
+        <view class="notice">
+            <view>
+                <image mode="aspectFit" src="/images/index/laba.png"></image>
+                <view class="text">最新 <text>消息</text>：培训班免费报名，名额有限，速领！</view>
+            </view>
+        </view>
+    </view>
+
+    <view class="hd">
+        <view class="hd-header">
+            <image class="img1" mode="aspectFit" src="/images/index/title-1.png"></image>
+            <view class="text">今日概况</view>
+            <!--<image class="img-arrow" mode="aspectFit" src="/images/index/arrow-r.png"></image>-->
+        </view>
+        <view class="today-info">
+            <view class="item-wrap">
+                <navigator class="item item1" url="/pages/resultsallot/resultsallot" hover-class="none">
+                    <image mode="aspectFit" src="/images/index/today-1.png"></image>
+                    <view class="text">收款业绩</view>
+                    <view class="rank">NO. 8</view>
+                    <view class="num">¥<text>3,718.00</text></view>
+                </navigator>
+                <navigator class="item item2" url="/pages/resultsallot/resultsallot" hover-class="none">
+                    <image mode="aspectFit" src="/images/index/today-2.png"></image>
+                    <view class="text">消费业绩</view>
+                    <view class="rank">NO. 8</view>
+                    <view class="num">¥<text>3,718.00</text></view>
+                </navigator>
+            </view>
+            <view class="item-wrap">
+                <navigator class="item item3" url="/pages/bookingManagement/bookingManagement" hover-class="none">
+                    <image mode="aspectFit" src="/images/index/today-3.png"></image>
+                    <view class="text">总预约</view>
+                    <view class="rank"></view>
+                    <view class="num"><text>35</text>人</view>
+                </navigator>
+                <navigator class="item item4" url="/pages/order/order" hover-class="none">
+                    <image mode="aspectFit" src="/images/index/today-4.png"></image>
+                    <view class="text">已服务</view>
+                    <view class="rank"></view>
+                    <view class="num"><text>18</text>人</view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+
+    <view class="hd">
+        <view class="hd-header">
+            <image class="img1" mode="aspectFit" src="/images/index/title-2.png"></image>
+            <view class="text">本月收款概况</view>
+            <image class="img-arrow" mode="aspectFit" src="/images/index/arrow-r.png"></image>
+        </view>
+        <view class="tb-wrap">
+            <view class="num-info">
+                <image class="user-img" mode="aspectFit" src="/images/del/pic.png"></image>
+                <view class="my-num">¥ <text>8384</text></view>
+                <view class="target">/本月指标<text class="ui-c4">￥14850</text></view>
+            </view>
+            <view class="tb">
+                <view style="display: {{showCanvas ? 'block': 'none'}}">
+                    <view class="tb-canvas">
+                        <canvas canvas-id="myCanvas" />
+                    </view>
+                    <view class="line-index" style="top: {{tbData1Bfb.bfb1}}%;"><text>业绩指标</text></view>
+                    <view class="line-my" style="top: {{tbData1Bfb.bfb2}}%;"></view>
+                    <view class="show-num" style="top: {{tbData1Bfb.bfb2}}%; left: {{tbData1Bfb.bfb4}}%">¥{{tbData1.num3}}<text></text></view>
+                </view>
+            </view>
+            <view class="tb-num">
+                <view class="sanjiao" style="left: {{tbData1Bfb.bfb3}}%;"></view>
+                <view class="num1 num11">
+                    <text>全店最低</text>
+                    <text>￥{{tbData1.num1}}</text>
+                </view>
+                <view class="num1 num12">
+                    <text>全店平均</text>
+                    <text>￥{{tbData1.num4}}</text>
+                </view>
+                <view class="num1 num13">
+                    <text>全店最高</text>
+                    <text>￥{{tbData1.num2}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class="hd">
+        <view class="hd-header">
+            <image class="img1" mode="aspectFit" src="/images/index/title-3.png"></image>
+            <view class="text">本月消费概况</view>
+            <image class="img-arrow" mode="aspectFit" src="/images/index/arrow-r.png"></image>
+        </view>
+        <view class="tb-wrap">
+            <view class="num-info">
+                <image class="user-img" mode="aspectFit" src="/images/del/pic.png"></image>
+                <view class="my-num">¥ <text>8384</text></view>
+                <view class="target">/本月指标<text class="ui-c1">￥14850</text></view>
+            </view>
+
+        </view>
+    </view>
+
+</view>
+<component-navigation bindmoreListStatus="onMoreListStatus"></component-navigation>

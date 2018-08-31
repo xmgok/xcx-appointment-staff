@@ -1,0 +1,130 @@
+page {
+  padding-bottom: 20rpx;
+}
+
+.tec_tab {
+  display: flex;
+  line-height: 106rpx;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  margin-bottom: 22rpx;
+}
+
+.tec_tab .before {
+  height: 4rpx;
+  background: transparent;
+}
+
+.tec_tab .before.LShift {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  right: 50%;
+  transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.tec_tab .before.RShift {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
+}
+
+.tec_tab .before .element {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  background: #ff5183;
+}
+
+.tec_tab .tec_tab_li {
+  flex: 1;
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.tec_tab .tec_tab_li.active {
+  color: #dc1d54;
+}
+
+.results_li {
+  padding: 60rpx 35rpx;
+  background: #fff;
+  margin-bottom: 22rpx;
+}
+
+.results_li .results_amount {
+  display: flex;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  font-size: 25rpx;
+  margin-bottom: 42rpx;
+  color: #92979b;
+}
+
+.results_li .results_amount .amount {
+  display: inline-block;
+  color: #dc1d54;
+}
+
+.results_li .results_cust {
+  display: flex;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  margin-bottom: 40rpx;
+}
+
+.results_li .results_cust .cust_name {
+  font-size: 35rpx;
+  color: #000;
+  padding: 10rpx 0;
+}
+
+.results_li .results_cust .cust_name .cust_code {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #92979b;
+}
+
+.results_li .results_cust .results_btn {
+  border-radius: 6rpx;
+  font-size: 28rpx;
+  color: #fff;
+  padding: 0 26rpx;
+  line-height: 66rpx;
+  height: 66rpx;
+}
+
+.results_li .results_cust .results_btn.colorRed {
+  background: #ff5183;
+  box-shadow: 0 12rpx 23rpx 0 rgba(255, 81, 131, 0.5);
+}
+
+.results_li .results_cust .results_btn.colorBlue {
+  background: #588aff;
+  box-shadow: 0 12rpx 23rpx 0 rgba(88, 138, 255, 0.5);
+}
+
+.results_li .results_server {
+  font-size: 25rpx;
+  color: #92979b;
+  display: flex;
+  display: -webkit-box;
+  line-height: 60rpx;
+}
+
+.results_li .results_server .server_text {
+  width: 20%;
+  text-align: right;
+}
+
+.results_li .results_server .server_content {
+  flex: 1;
+  font-size: 25rpx;
+  color: #333333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

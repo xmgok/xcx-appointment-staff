@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "填写日志",
+    "usingComponents": {
+      "component-loading": "/component/loading/loading"
+    }
+  }
+  

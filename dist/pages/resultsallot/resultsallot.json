@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "业绩分配",
+    "usingComponents": {
+        "component-loading": "/component/loading/loading"
+    }
+}

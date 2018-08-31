@@ -1,0 +1,26 @@
+<block wx:if="{{show}}">
+    <view class="ui-dialog">
+        <view class="dialog-title">
+            <view class="title">选择床位</view>
+            <view class="cancel" bindtap="bindCancel">取消</view>
+            <view class="confirm" bindtap="bindConfirm">确定</view>
+        </view>
+        <view class="dialog-content">
+            <view class="choose-bed-wrap">
+                <view class="jj">
+                    <view class="jj-1">图例</view>
+                    <view class="jj-2 t2">空闲</view>
+                    <view class="jj-2">服务中</view>
+                </view>
+                <view class="list-wrap">
+                    <view class="item" wx:for="{{listData}}" wx:key="{{index}}">
+                        <text wx:if="{{item.status ==1}}" class="t1" bindtap="bindChooseBed" data-index="{{index}}">{{item.num}}</text>
+                        <text wx:if="{{item.status ==2}}" class="t2" bindtap="bindChooseBed" data-index="{{index}}">{{item.num}}</text>
+                        <text wx:if="{{item.status ==3}}" class="t3" bindtap="bindChooseBed" data-index="{{index}}">{{item.num}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="ui-dialog-bg"></view>
+</block>

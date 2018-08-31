@@ -1,0 +1,28 @@
+@charset "utf-8";
+@import "./variables";
+
+//设计稿是375的，需要*2
+@function rpx2($rpx) {
+  @return $rpx * 2rpx;
+}
+
+@function rpx($rpx) {
+  @return $rpx * 1rpx;
+}
+
+@function pxrem($rpx) {
+  @return $rpx * 1rpx;
+}
+
+
+//省略号
+@mixin ellipsis2($lineClamp: 1, $lineHeight: 18) {
+  display: -webkit-box;
+  height: rpx($lineHeight * $lineClamp);
+  overflow: hidden;
+  line-height: rpx($lineHeight);
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: $lineClamp;
+  -webkit-box-orient: vertical;
+}

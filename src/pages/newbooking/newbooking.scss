@@ -1,0 +1,40 @@
+@import "../../sass-utils/mix";
+.New_item{
+    padding:pxrem(40) pxrem(35);
+    margin-bottom:pxrem(22);
+    box-shadow: pxrem(0) pxrem(4) pxrem(23) pxrem(0)rgba(0, 0, 0, 0.1);
+    font-size:pxrem(28);
+    color:#92979b;
+    background: #fff;
+    display:-webkit-box;
+    -webkit-box-pack:justify;
+    &:first-child{
+        box-shadow: inset pxrem(0) pxrem(1) pxrem(0) pxrem(0) #dddddd;
+    }
+}
+.New_Text{
+    padding:pxrem(35);
+    box-shadow: pxrem(0) pxrem(4) pxrem(23) pxrem(0)rgba(0, 0, 0, 0.1);
+    background: #fff;
+    font-size:pxrem(28);
+    color:#92979b;
+    display: flex;
+    .textarea{
+        flex: 1;
+        resize:none;
+        height:pxrem(130);
+        border: solid 1px #cccccc;
+        margin-left:pxrem(22); 
+        padding:pxrem(12);
+        box-sizing: border-box;
+    }
+}
+.New_btn{
+    margin:pxrem(58) pxrem(35) 0;
+    text-align: center;
+    padding:pxrem(30);
+    font-size:pxrem(35);
+    color: #fff;
+    background:#588aff;
+    border-radius: pxrem(100);
+}

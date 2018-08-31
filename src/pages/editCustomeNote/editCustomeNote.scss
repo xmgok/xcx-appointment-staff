@@ -1,0 +1,103 @@
+@import "../../sass-utils/mix";
+
+.header {
+    display: flex;
+    display: -webkit-flex;
+    height: pxrem(177);
+    font-size: pxrem(42);
+    color: #fff;
+    padding: 0 pxrem(35);
+    background: #000;
+    justify-content: space-between;
+    align-items: center;
+    .icon-camera .img {
+        width: pxrem(94);
+        height: pxrem(95);
+    }
+}
+
+.fill-log {
+    margin-bottom: pxrem(25);
+    textarea {
+        height: pxrem(163);
+        width: 100%;
+        padding: pxrem(35);
+        font-size: pxrem(28);
+        line-height: pxrem(45);
+        box-sizing: border-box;
+        overflow-y: auto;
+    }
+}
+
+.fill-log-result {
+    padding: pxrem(47) 0 pxrem(21);
+    background-color: #fff;
+    .icon-del-pink {
+        width: pxrem(34);
+        height: pxrem(34);
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: pxrem(20);
+    }
+    .label-item {
+        display: inline-block;
+        padding: pxrem(24);
+        border: pxrem(1) solid #ff5183;
+        background: #fff;
+        color: #ff5183;
+        border-radius: pxrem(23);
+        margin-bottom: pxrem(22);
+        margin-right: pxrem(22);
+    }
+    .label-view{
+        padding: 0 pxrem(35);
+    }
+    .images-view {
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+        margin-top:pxrem(10);
+        padding-left: pxrem(35);
+        .img-view{
+            position: relative;
+            width:pxrem(142);
+            height:pxrem(142);
+            margin-right: pxrem(34);
+            margin-bottom: pxrem(26);
+        }
+        .img {
+            width:pxrem(142);
+            height:pxrem(142);
+        }
+    }
+    .icon-del-white {
+        width: pxrem(36);
+        height: pxrem(36);
+        position: absolute;
+        right:pxrem(10);
+        top:pxrem(10);
+    }
+}
+
+.view-btn {
+    margin-top:pxrem(69);
+    padding: 0 pxrem(35) pxrem(54);
+}
+
+.btn-submit {
+    background-color: #bbb;
+    font-size: pxrem(35);
+    color: #fff;
+    box-shadow: 0 pxrem(12) pxrem(23) 0 rgba(187, 187, 187, 0.5);
+    -webkit-box-shadow: 0 pxrem(12) pxrem(23) 0 rgba(187, 187, 187, 0.5);
+    border-radius: pxrem(60);
+    box-shadow: 0px 12px 23px 0px 
+		rgba(187, 187, 187, 0.5);
+    border: none;
+    margin-bottom:pxrem(120);
+    &.can-submit{
+        background: #588aff;
+        box-shadow: 0px 12px 23px 0px 
+		rgba(88, 138, 255, 0.5);
+    }
+}

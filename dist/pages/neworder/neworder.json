@@ -1,0 +1,6 @@
+{
+    "navigationBarTitleText": "新增点单",
+    "usingComponents": {
+        "component-chooseBed": "/component/chooseBed/chooseBed"
+      }
+}

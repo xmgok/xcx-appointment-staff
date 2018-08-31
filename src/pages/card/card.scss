@@ -1,0 +1,167 @@
+@import "../../sass-utils/mix";
+.search {
+  display: flex;
+  justify-content: center;
+  .search-form {
+    font-family: SourceHanSansCN-Regular;
+    font-size: pxrem(24);
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0px;
+    color: #aaaaaa;
+    display: flex;
+    height: pxrem(104);
+    width: pxrem(680);
+    margin: auto auto pxrem(34) auto;
+    background-color: #fff;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: pxrem(4);
+    .icon {
+      margin: auto pxrem(12) auto pxrem(22);
+    }
+    input {
+      font-size: pxrem(30);
+      width: pxrem(580);
+    }
+  }
+}
+
+.tec_tab{
+  display: -webkit-box;
+  line-height: pxrem(106);
+  text-align: center;
+  background: #fff;
+  box-shadow: inset pxrem(0) pxrem(-1) pxrem(0) pxrem(0) #dddddd;
+  .tec_tab_li{
+      -webkit-box-flex: 1;
+      font-size: pxrem(28);
+      color: #666666;
+      &.active{
+          border-bottom: pxrem(1) solid $c1;
+          color: $c1;
+      }
+  }
+}
+.sc_content{
+  display: -webkit-box;
+  min-height: 100vh;
+  margin-bottom: pxrem(106);
+  .server_list{
+      width:pxrem(152);
+      background: #f5f5f5;
+      box-shadow: inset pxrem(-1) 0px 0px 0px #dddddd;
+      .server_list_li{
+          width: 100%;
+          box-shadow: inset pxrem(0) pxrem(-1) pxrem(0) pxrem(0) #dddddd;
+          text-align: center;
+          color: #333333;
+          font-size:pxrem(23);
+          &.active{
+              color:$c1;
+              background: #fff;
+          }
+          .wrap_li {            
+            display: flex;
+            height: pxrem(106);
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            .name {
+              margin: pxrem(22) auto pxrem(16) auto;
+            }
+            .tip {
+              color: $c2;
+            }
+          }
+      }
+  }
+  .Product_list{
+      -webkit-box-flex: 1;
+      .Product_list_li{
+          padding:pxrem(34);
+          background: #fff;
+          display: -webkit-box;
+          -webkit-box-pack: justify;
+          font-size:pxrem(23);
+          box-shadow: inset pxrem(0) pxrem(-1) pxrem(0) pxrem(0) #dddddd;
+          .Product_name{
+              font-size:pxrem(28);
+              color: #333333;
+              margin-bottom:pxrem(28);
+          }
+          .Product_date{
+              color: #92979b;
+          }
+          .price{
+              margin-top:pxrem(28);
+              .Product_Present{
+                  color: #f96868;
+                  display: inline-block;
+                  margin-right:pxrem(16);
+              }
+              .Product_price{
+                  color: #cccccc;
+                  display: inline-block;
+                  text-decoration: line-through;    
+              }
+          }
+          .Product_count{
+              padding:pxrem(50) 0;
+              .icons_count{
+                  display: inline-block;
+                  width:pxrem(40);
+                  height:pxrem(40);
+                  border: solid pxrem(2) #bbbbbb;
+                  border-radius: 50%;
+                  text-align: center;
+                  line-height:pxrem(40);
+                  font-size:pxrem(32); 
+                  &.count_minus{
+                      color:#bbbbbb;
+                  }
+                  &.count_add{
+                      background: #f96868;
+                      color: #fff;
+                  }
+              }
+              .counting{
+                  display: inline-block;
+                  font-size:pxrem(28);
+                  color: #333;
+                  margin: 0 pxrem(22);
+              }
+          }
+      }
+  }
+}
+.Fixed{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: pxrem(106);
+  z-index: 1;
+  background-color: #ffffff;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  box-shadow: 0px pxrem(4) pxrem(23) 0px rgba(0, 0, 0, 0.1);
+  .people{
+      margin-left:pxrem(36);
+      line-height:pxrem(106);
+      color:#92979b;
+      font-size: pxrem(28);
+      .number{
+          font-size:pxrem(35); 
+          color: #f96868;
+          display: inline-block;
+      }
+  }
+  .submit{
+      line-height:pxrem(106);
+      font-size:pxrem(35); 
+      padding: 0 pxrem(78);     
+      background: $c1; 
+      color: #fff;
+  }
+}

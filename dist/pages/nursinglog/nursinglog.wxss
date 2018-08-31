@@ -1,0 +1,65 @@
+page {
+  background: #f5f5f5;
+}
+
+.page-nursinglog-view .nursinglog-view-item {
+  background: #fff;
+  padding: 61rpx 37rpx;
+  margin-bottom: 23rpx;
+}
+
+.page-nursinglog-view .item-top {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-nursinglog-view .left {
+  font-size: 35rpx;
+  color: #000;
+}
+
+.page-nursinglog-view .subinfo {
+  color: #92979b;
+}
+
+.page-nursinglog-view .btn-fill {
+  width: 141rpx;
+  height: 57rpx;
+  line-height: 57rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background: #ff5183;
+  text-align: center;
+  border-radius: 5rpx;
+  box-shadow: 0 20rpx 40rpx 0 rgba(255, 81, 131, 0.5);
+}
+
+.log-info-item {
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  font-size: 26rpx;
+  padding: 10rpx 0;
+}
+
+.log-info-item .info {
+  flex: 1;
+  display: flex;
+}
+
+.log-info-item .info-label, .log-info-item .service-num {
+  color: #92979b;
+}
+
+.log-info-item .service-num text {
+  color: #dc1d54;
+}
+
+.log-info-item .des {
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

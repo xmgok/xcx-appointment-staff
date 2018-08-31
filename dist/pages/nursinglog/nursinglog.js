@@ -1,0 +1,71 @@
+const app = getApp();
+
+Page({
+  data: {
+    dataList:[
+      {
+        id:0,
+        vipname:"马利萍",
+        vipnum:613001117,
+        time:"2018-08-14",
+        servicePerson:"龚艳丽",
+        serviceItem:"kneipp全身精油减压护理",
+        serviceCount:2,
+        bednum:809,
+        total:299.00
+      },
+      {
+        id:0,
+        vipname:"马利萍",
+        vipnum:613001117,
+        time:"2018-08-14",
+        servicePerson:"龚艳丽",
+        serviceItem:"kneipp全身精油减压护理",
+        serviceCount:2,
+        bednum:809,
+        total:299.00
+      },
+      {
+        id:0,
+        vipname:"马利萍",
+        vipnum:613001117,
+        time:"2018-08-14",
+        servicePerson:"龚艳丽",
+        serviceItem:"kneipp全身精油减压护理",
+        serviceCount:2,
+        bednum:809,
+        total:299.00
+      },
+      {
+        id:0,
+        vipname:"马利萍",
+        vipnum:613001117,
+        time:"2018-08-14",
+        servicePerson:"龚艳丽",
+        serviceItem:"kneipp全身精油减压护理",
+        serviceCount:2,
+        bednum:809,
+        total:299.00
+      },
+      {
+        id:0,
+        vipname:"马利萍",
+        vipnum:613001117,
+        time:"2018-08-14",
+        servicePerson:"龚艳丽",
+        serviceItem:"kneipp全身精油减压护理",
+        serviceCount:2,
+        bednum:809,
+        total:299.00
+      }
+    ]
+  },
+  toFilllog(e){
+    let id=e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../filllog/filllog?id='+id
+    });
+  },
+  onLoad() {
+  },
+});

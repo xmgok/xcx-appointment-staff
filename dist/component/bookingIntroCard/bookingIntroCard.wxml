@@ -1,0 +1,21 @@
+<view class="customer_card_wrap">
+    <view class="customer_card" wx:for='{{datas}}' wx:key='{{index}}' data-item='{{item}}' data-index='{{index}}' bindtap="cardClick">
+        <view class="cust_content {{item.status==0?'completed':''}} {{item.status==1?'confirmed':''}} {{item.status==2?'no_confirmed':''}}">
+            <view class="cust_ul">
+                <view class="cust_li cust_name">{{item.cust_name}}</view>
+                <view class="cust_li booking_item">{{item.Items[0].serv_name}}</view>
+                <view class="cust_li booking_time">
+                    <view class="icons icons-search"></view>
+                    <text wx:if="{{item.arrive_time < '12:00'}}">上午</text>
+                    <text wx:else>下午</text>
+                    {{item.arrive_time}} {{item.duration}}(分钟)
+                </view>
+            </view>
+            <view class="status_btn">
+                <text wx:if="{{item.status==0}}">已完成</text>
+                <text wx:elif="{{item.status==1}}">已确定</text>
+                <text wx:elif="{{item.status==2}}">待确定</text>
+            </view>
+        </view>
+    </view> 
+</view>

@@ -1,0 +1,41 @@
+<view class="search">
+    <view class="search-form">
+        <icon class="icon" type="search" size="{{iconSize}}"></icon>
+        <input placeholder="请输入客户编号/手机/姓名" />
+    </view>
+</view>
+
+<view class="tec_tab">
+    <view class="tec_tab_li {{tabIndex==item.index?'active':''}}" data-index="{{index}}" bindtap="switchTab" wx:for="{{server}}" wx:key="{{index}}">{{item.nane}}</view>
+</view>
+<view class="sc_content">
+    <view class="server_list">
+        <view class="server_list_li {{ser_index==index?'active':''}}" data-index="{{index}}" bindtap="sercercard" wx:for="{{ser_list}}" wx:key="{{index}}">
+            <view class="wrap_li">
+                <text class="name">{{item.nane}}</text>
+                <text class="{{ item.date === 0 ? 'tip' : '' }}">18天后到期</text>
+            </view>
+        </view>
+    </view>
+    <view class="Product_list">
+        <view class="Product_list_li {{card_index==index?'active':''}}" data-index="{{index}}" bindtap="Productcard"  wx:for="{{card_list}}" wx:key="{{index}}">
+            <view>
+                <view class="Product_name">{{item.nane}}</view>
+                <view class="Product_date">{{item.time}} 分钟</view>
+                <view class="price">
+                    <view class="Product_Present">现价：{{item.Present}}</view>
+                    <view class="Product_price">原价：{{item.price}}</view>
+                </view>
+            </view>
+            <view class="Product_count">
+                <view wx:if="{{item.count}}" class="icons_count count_minus">-</view>
+                <view wx:if="{{item.count}}" class="counting">{{item.count}}</view>
+                <view class="icons_count count_add">+</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="Fixed">
+    <view class="people">已选择：<view class="number">{{number}}</view> 项服务</view>
+    <view class="submit" bindtap="submit">选好了</view>
+</view>

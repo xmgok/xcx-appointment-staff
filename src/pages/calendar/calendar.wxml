@@ -1,0 +1,24 @@
+<view class='wrap'>
+    <view>
+        <view class='date-show'>
+            <view class='lt-arrow' bindtap='lastMonth'>《</view>
+            {{year}}年{{month}}月
+            <view class='rt-arrow' bindtap='nextMonth'>》</view>
+        </view>
+    </view>
+    <view class='header'>
+        <view wx:for='{{date}}' class='{{(index == todayIndex) && isTodayWeek ? "weekMark" : ""}}' wx:key="{{index}}">{{item}}<view></view></view>
+    </view>
+    <view class='date-box'>
+        <view wx:for='{{dateArr}}' class='{{isToday == item.isToday ? "nowDay" : ""}}' data-date='{{item.isToday}}' wx:key="{{index}}">
+            <view class='date-head'>
+                <view>{{item.dateNum}}</view>
+            </view>
+            <block wx:if="{{item.status}}">
+                <view class="disc disc1" wx:if="{{item.status == 1}}"></view>
+                <view class="disc disc2" wx:if="{{item.status == 2}}"></view>
+                <view class="disc disc3" wx:if="{{item.status == 3}}"></view>
+            </block>
+        </view>
+    </view>
+</view>

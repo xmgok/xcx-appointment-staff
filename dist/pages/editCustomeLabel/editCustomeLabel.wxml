@@ -1,0 +1,24 @@
+<view class="page-editlabel-view">
+    <view class="list-record">
+        <view class="content-wrap">
+            <!-- <view class="list-title">体型</view>
+            <view class="list-view">
+                <text class="label-item active">西洋梨型</text>
+                <text class="label-item">葫芦型</text>
+                <text class="label-item">苹果型</text>
+                <text class="label-item">中广型</text>
+                <text class="label-item">浮肉型</text>
+                <text class="label-item">松垮型</text>
+            </view> -->
+            <block wx:for="{{recoredList}}" wx:for-item="recored" wx:for-index="index" wx:key="*this">
+                <view class="list-title">{{recored.title}}</view>
+                <view class="list-view">
+                    <text data-type='{{index}}' data-id="{{labelId}}" class="label-item {{recored.active==labelId?'active':''}}" wx:for="{{recored.dataList}}"  wx:for-item="labelItem" wx:for-index='labelId' wx:key="*this" bindtap="toggleLabelState">{{labelItem.label}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="view-btn">
+        <button class="btn-submit {{2>1?'can-submit':''}}" bindtap="submit">提交</button>
+    </view>
+</view>

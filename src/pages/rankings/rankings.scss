@@ -1,0 +1,189 @@
+@import "../../sass-utils/mix";
+
+page {
+  padding-top: pxrem(300);
+  padding-bottom: pxrem(20);
+}
+
+.fixed-wrap {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 55;
+}
+
+.tab {
+  display: -webkit-box;
+  line-height: pxrem(98);
+  text-align: center;
+  background: white;
+  border-bottom: pxrem(1) solid #dddddd;
+  font-size: pxrem(24);
+  color: #666666;
+  .item {
+    -webkit-box-flex: 1;
+    width: 1%;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    &.active {
+      color: $c3;
+      text {
+        border-bottom: pxrem(2) solid $c3;
+        display: block;
+        margin-bottom: pxrem(-1);
+      }
+    }
+  }
+}
+
+.date-wrap {
+  background: #000000;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  color: rgba(146, 151, 155, 1);
+  text-align: center;
+  font-size: pxrem(24);
+  .item {
+    width: 1%;
+    height: pxrem(100);
+    padding-top: pxrem(20);
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    border-right: pxrem(1) solid rgba(221, 221, 221, 0.3);
+    &:last-child {
+      border-right: 0;
+    }
+    .text {
+      line-height: pxrem(22);
+      padding-bottom: pxrem(20);
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      .arrow {
+        margin-left: pxrem(15);
+        width: 0;
+        height: 0;
+        border-top: pxrem(10) solid white;
+        border-left: pxrem(8) solid transparent;
+        border-right: pxrem(8) solid transparent;
+        display: none;
+      }
+    }
+    .choose-text {
+      line-height: pxrem(18);
+      font-size: pxrem(18);
+    }
+    &.active {
+      color: white;
+      .arrow {
+        display: block;
+      }
+    }
+  }
+}
+
+.list-wrap {
+  background: white;
+  position: relative;
+  .item-l {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: white;
+  }
+  .item-con {
+    box-sizing: border-box;
+    padding-left: pxrem(222);
+  }
+  .item {
+    border-bottom: pxrem(1) solid rgba(204, 204, 204, 1);
+    line-height: pxrem(80);
+    text-align: center;
+    font-size: pxrem(22);
+    display: -webkit-box;
+    -webkit-box-align: center;
+    &:nth-child(1), &:nth-child(2), &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+      .num {
+        text {
+          background: rgba(238, 37, 95, 1);
+        }
+      }
+    }
+    .num, .name, .text {
+      width: pxrem(140);
+      border-right: pxrem(1) solid rgba(204, 204, 204, 1);
+      height: pxrem(80);
+    }
+    .text {
+      &:last-child {
+        border-right: 0;
+      }
+      &.text22 {
+        -webkit-box-flex: 1;
+      }
+    }
+    .num {
+      width: pxrem(80);
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      text {
+        padding: 0 pxrem(5);
+        display: block;
+        min-width: pxrem(17);
+        height: pxrem(27);
+        line-height: pxrem(27);
+        background: rgba(153, 153, 153, 1);
+        border-radius: pxrem(3);
+        color: white;
+        text-align: center;
+        font-size: pxrem(18);
+      }
+    }
+    &.item-title {
+      background: rgba(255, 81, 131, 1);
+      line-height: pxrem(100);
+      color: white;
+      .num, .name, .text {
+        border-right: pxrem(1) solid rgba(216, 36, 87, 1);
+        height: pxrem(100);
+      }
+    }
+  }
+  .item-l {
+    .item {
+      &.item-title {
+        background: rgba(216, 36, 87, 1);
+        .num, .name {
+          border-right: pxrem(1) solid rgba(155, 13, 54, 1);
+        }
+      }
+    }
+  }
+}
+
+.fixed-my-rank {
+  position: fixed;
+  right: pxrem(30);
+  bottom: pxrem(30);
+  width: pxrem(120);
+  height: pxrem(80);
+  box-sizing: border-box;
+  padding-top: pxrem(12);
+  text-align: center;
+  background: rgba(255, 81, 131, 1);
+  border-radius: pxrem(40);
+  box-shadow: 0 pxrem(10) pxrem(20) 0 rgba(255, 81, 131, 0.5);
+  color: white;
+  .num {
+    font-size:pxrem(30);
+    line-height:pxrem(22);
+    padding-bottom: pxrem(12);
+  }
+  .text {
+    font-size: pxrem(18);
+    line-height: pxrem(20);
+  }
+}

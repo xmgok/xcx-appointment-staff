@@ -1,0 +1,228 @@
+@font-face {
+  font-family: 'iconfont';
+  /* project id 813366 */
+  src: url("//at.alicdn.com/t/font_813366_0en5auj1ayhg.eot");
+  src: url("//at.alicdn.com/t/font_813366_0en5auj1ayhg.eot?#iefix") format("embedded-opentype"), url("//at.alicdn.com/t/font_813366_0en5auj1ayhg.woff") format("woff"), url("//at.alicdn.com/t/font_813366_0en5auj1ayhg.ttf") format("truetype"), url("//at.alicdn.com/t/font_813366_0en5auj1ayhg.svg#iconfont") format("svg");
+}
+
+.icons {
+  font-family: "iconfont" !important;
+  font-size: inherit;
+  color: inherit;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icons-1:before {
+  content: "\e62c";
+}
+
+.icons-2:before {
+  content: "\e62b";
+}
+
+.icons-3:before {
+  content: "\e62a";
+}
+
+.icons-4:before {
+  content: "\e629";
+}
+
+.icons-5:before {
+  content: "\e628";
+}
+
+.icons-6:before {
+  content: "\e627";
+}
+
+.icons-7:before {
+  content: "\e626";
+}
+
+.icons-8:before {
+  content: "\e625";
+}
+
+.icons-9:before {
+  content: "\e624";
+}
+
+.icons-10:before {
+  content: "\e623";
+}
+
+.icons-11:before {
+  content: "\e622";
+}
+
+.icons-12:before {
+  content: "\e621";
+}
+
+@keyframes ui-loading {
+  0% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+  50% {
+    -webkit-transform: scaley(0.4);
+    transform: scaley(0.4);
+  }
+  100% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+}
+
+.ui-c1 {
+  color: #5D97FF;
+}
+
+.ui-c2 {
+  color: #f96868;
+}
+
+.ui-c3 {
+  color: #333333;
+}
+
+.ui-c4 {
+  color: #FF5183;
+}
+
+.ui-c5 {
+  color: #1abc9c;
+}
+
+.ui-font-weight {
+  font-weight: bold;
+}
+
+.ui-font-pf-sem {
+  font-family: "PingFangSC-Semibold";
+}
+
+.ui-no-data {
+  text-align: center;
+  padding: 40rpx 0;
+  color: #aaaaaa;
+}
+
+.ui-dialog-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 950;
+}
+
+.ui-dialog {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 960;
+  background: white;
+  width: 100%;
+}
+
+.ui-dialog .dialog-title {
+  background: #f5f5f5;
+  line-height: 116rpx;
+  border-bottom: 1rpx solid #dddddd;
+  text-align: center;
+  position: relative;
+  font-size: 28rpx;
+}
+
+.ui-dialog .dialog-title .title {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.ui-dialog .dialog-title .cancel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 116rpx;
+  color: #92979b;
+}
+
+.ui-dialog .dialog-title .confirm {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 116rpx;
+  color: #5D97FF;
+}
+
+page {
+  color: #000000;
+  background: #f5f5f5;
+  font-family: 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 24rpx;
+}
+
+.tc {
+  text-align: center;
+}
+
+.pt10 {
+  padding-top: 20rpx;
+}
+
+.p20 {
+  padding: 40rpx;
+}
+
+.pt50 {
+  padding-top: 100rpx;
+}
+
+.pl20 {
+  padding-left: 40rpx;
+}
+
+.pr20 {
+  padding-right: 40rpx;
+}
+
+.pb5 {
+  padding-bottom: 10rpx;
+}
+
+.pb10 {
+  padding-bottom: 20rpx;
+}
+
+.pb15 {
+  padding-bottom: 30rpx;
+}
+
+.pb20 {
+  padding-bottom: 40rpx;
+}
+
+.mb5 {
+  margin-bottom: 10rpx;
+}
+
+.mb10 {
+  margin-bottom: 20rpx;
+}
+
+.mt10 {
+  margin-top: 20rpx;
+}
+
+.mt20 {
+  margin-top: 40rpx;
+}
+
+image {
+  display: block;
+}

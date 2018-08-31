@@ -1,0 +1,38 @@
+<view class="collection">
+    <view class="total_text">可分配总金额</view>
+    <view class="amount_total">￥<view class="total_amount">{{total}}</view></view>
+    <view class="tabtitle">
+        <view class="tabtitle_li" wx:for="{{tabtitle}}" wx:key="{{index}}">{{item}}</view>
+    </view>
+    <view class="employees" wx:for="{{conntent}}" wx:key="{{index}}">
+        <view class="employees_li">
+            <image class="clear" wx:if="{{states==0&&item.amount&&item.percent&&isshow}}" bindtap="clearbind" data-index="{{index}}" src="../../images/results/del.png" />
+            <view class="emp_name">{{item.emp_name}}</view>
+            <view class="emp_code">{{item.emp_code}}</view>
+        </view>
+        <view class="employees_li">
+            <view class="amount">￥</view>
+            <input wx:if="{{states==0}}" value="{{item.amount}}" data-index="{{index}}" bindfocus="bindfocus" bindblur="amountbindblur"/>
+            <view wx:else class="seeamount">{{item.amount}}</view>
+        </view>
+        <view class="employees_li">
+            <input wx:if="{{states==0}}" value="{{item.percent}}" data-index="{{index}}" bindfocus="bindfocus"  bindblur="percentbindblur"/>
+            <view wx:else class="seepercent">{{item.percent}}</view>
+            <view class="percent">%</view>
+            <image class="results" wx:if="{{states==0&&conntent.length-1==index&&isshow}}" bindtap="resultsbind" src="../../images/results/results.png" />
+        </view>
+    </view>
+    <view class="employees" wx:if="{{states==0}}">
+        <view class="employees_li emp_name"  bindtap="addition">添加员工</view>
+        <view class="employees_li">
+            <view class="amount">￥</view>
+            <input disabled/>
+        </view>
+        <view class="employees_li">
+            <input disabled/>
+            <view class="percent">%</view>
+        </view>
+    </view>
+    <view class="already">已分配：<view class="amount">￥{{'998'}}</view></view>
+</view>
+<view class="callot_btn" wx:if="{{states==0}}" bindtap="submit">分配</view>

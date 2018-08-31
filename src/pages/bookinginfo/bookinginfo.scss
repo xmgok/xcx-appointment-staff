@@ -1,0 +1,62 @@
+@import "../../sass-utils/mix";
+.content_state {
+    padding: pxrem(58) pxrem(35);
+    background: #f5f5f5;
+    .state_text {
+        display: -webkit-box;
+        -webkit-box-pack: justify;
+        font-size: pxrem(25);
+        color: #666666;
+        line-height: pxrem(46);
+        .text_name {
+            margin-bottom: pxrem(56);
+            font-size: pxrem(46);
+            color: #000000;
+        }
+    }
+    .state_mark {
+        background-image: linear-gradient(90deg, #ff4e81 0%, #ffbd7b 100%), linear-gradient(#ffffff, #ffffff);
+        background-blend-mode: normal, normal;
+        box-shadow: 0px pxrem(20) pxrem(40) 0px rgba(255, 95, 128, 0.3);
+        border-radius: pxrem(12);
+        padding: pxrem(44) pxrem(36);
+        color: #fff;
+        .mark_vip {
+            font-size: pxrem(25);
+            margin-bottom: pxrem(22);
+        }
+        .mark_num {
+            font-size: pxrem(35);
+        }
+    }
+}
+
+.info_content {
+    background: #fff;
+    box-shadow: inset pxrem(0) pxrem(1) pxrem(0) pxrem(0) #dddddd;
+    padding: pxrem(56) pxrem(35);
+    .info_cell {
+        margin: 0 pxrem(35);
+        line-height: pxrem(70);
+        font-size: pxrem(25);
+        color: #92979b;
+        display: -webkit-box;
+        .cell_color {
+            color: #000;
+        }
+        .title {
+            color: #92979b;
+        }
+    }
+    .booking_btn {
+        margin-top: pxrem(70);
+        text-align: center;
+        padding: pxrem(30);
+        font-size: pxrem(35);
+        border-radius: pxrem(100);
+        border: none;
+        background: #588aff;
+        color: #fff;
+        box-shadow: 0px pxrem(12) pxrem(40) 0px rgba(88, 138, 255, 0.3);
+    }
+}

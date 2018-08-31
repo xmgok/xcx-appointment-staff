@@ -1,0 +1,59 @@
+@import "../../sass-utils/mix";
+page{
+    background:#f5f5f5;
+}
+.page-nursinglog-view{
+    .nursinglog-view-item{
+        background: #fff;
+        padding: pxrem(61) pxrem(37);
+        margin-bottom: pxrem(23);
+    }
+    .item-top{
+        display: flex;
+        display: -webkit-flex;
+        justify-content:space-between;
+        align-items: center;
+    }
+    .left{
+        font-size: pxrem(35);
+        color:#000; 
+    }
+    .subinfo{
+        color: #92979b;
+    }
+    .btn-fill{
+        width: pxrem(141);
+        height:pxrem(57);
+        line-height: pxrem(57);
+        font-size: pxrem(24);
+        color: #fff;
+        background: #ff5183;
+        text-align: center;
+        border-radius: pxrem(5);
+        box-shadow: 0px 10px 20px 0px 
+		rgba(255, 81, 131, 0.5);
+    }
+}
+.log-info-item{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    font-size: pxrem(26);
+    padding: pxrem(10) 0;
+    .info{
+        flex: 1;
+        display: flex;
+    }
+    .info-label,.service-num{
+        color: #92979b;
+    }
+    .service-num text{
+        color: #dc1d54;
+    }
+    .des{
+        width: 60%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

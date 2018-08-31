@@ -1,0 +1,133 @@
+@import "../../sass-utils/mix";
+@import "../../sass-utils/variables";
+.lf {
+    float: left;
+}
+
+
+.clear::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.booking_title_wrap {
+    background-color: #fff;
+}
+
+.time_wrap {
+    box-shadow: 0px pxrem(4) pxrem(30) #efefef;
+    padding: pxrem(30) 0;
+    .date_wrap {
+        height: pxrem(144);
+        -webkit-overflow-scrolling: touch;
+        overflow: auto;
+        .date_content {
+            width: 14.285%;
+            text-align: center;
+            border-radius: 50%;
+            height: pxrem(72);
+            .date_main_po {
+                height: pxrem(72);
+                width: pxrem(72);
+                position: relative;
+                border-radius: 50%;
+                margin: 0 auto;
+                &.isSelect {
+                    background-color: $c3;
+                    color: #fff;
+                    .point {
+                        background-color: #fff !important;
+                    }
+                }
+                .date_main_ab {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    .point_wrap {
+                        line-height: pxrem(8);
+                        .point {
+                            display: inline-block;
+                            height: pxrem(6);
+                            width: pxrem(6);
+                            margin: 0 auto;
+                            border-radius: 50%;
+                            background-color: #ffffff;
+                            &.is_booking {
+                                background-color: $c3;
+                            }
+                            &.no_booking {
+                                background-color: #aaaaaa;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .week_wrap {
+        display: -webkit-flex;
+        .week_content {
+            flex: 1;
+            margin: pxrem(30) 0;
+            width: 14.285%;
+            text-align: center;
+        }
+    }
+}
+
+.booking_title {
+    margin: 0 pxrem(30);
+    padding: pxrem(50) 0;
+    border-bottom: 1px solid #dddddd;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    
+    .title_date {
+        width: pxrem(94);
+        height: pxrem(94);
+        background: #fad5df;
+        border-radius: pxrem(10);
+        text-align: center;
+        overflow: hidden;
+        .date_month {
+            font-size: pxrem(24);
+            color: #ffffff;
+            line-height: pxrem(36);
+            background: $c3;
+        }
+        .date_day {
+            font-size: pxrem(34);
+            color: $c3;
+            line-height: pxrem(60);
+        }
+    }
+    .title_info {
+        -webkit-box-flex: 1;
+        padding-left:pxrem(16);
+        color: #333333;
+        display: flex;
+        -webkit-flex-direction:column ;
+        justify-content:space-between ;
+        .info_margin {
+            // margin-bottom: pxrem(24);
+            font-size: pxrem(34);
+            display: -webkit-flex;
+            justify-content: space-between;
+        }
+        .info_text {
+            color: $c3;
+        }
+        .info_icon {
+            font-size: pxrem(26);
+            display: -webkit-flex;
+            justify-content: space-between;
+            color: #aaaaaa;
+            &.selected {
+                color: $c3;
+            }
+        }
+    }
+}

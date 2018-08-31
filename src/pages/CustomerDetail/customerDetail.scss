@@ -1,0 +1,440 @@
+@import "../../sass-utils/mix";
+@import "../../sass-utils/placehold";
+
+page {
+    // padding-top: pxrem(106);
+}
+
+button::after {
+    border: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+.info-box {
+    transition: all .5s linear;
+    display: none;
+
+    &.show {
+        display: block;
+    }
+
+    .pic {
+        image {
+            width: pxrem(130);
+            height: pxrem(130);
+            border-radius: 50%;
+            margin: 0 auto;
+        }
+    }
+
+    .username {
+        @extend %flex-vc;
+        margin-top: pxrem(41);
+        margin-bottom: pxrem(62);
+
+        .name {
+            font-size: pxrem(28);
+            color: #000;
+        }
+
+        .uid {
+            font-size: pxrem(23);
+            color: #92979b;
+            margin-left: pxrem(12);
+        }
+
+        .vip,
+        .bank {
+            font-size: pxrem(23);
+            color: #fff;
+            border-radius: pxrem(4);
+            padding: pxrem(5);
+        }
+
+        .vip {
+            background-color: #ea9f3d;
+            margin-left: pxrem(20);
+            margin-right: pxrem(12);
+        }
+
+        .bank {
+            background-color: #000;
+        }
+    }
+
+    .card-money {
+        @extend %flex-ad;
+        text-align: center;
+
+        .money {
+            font-size: pxrem(37);
+            color: #dc1d54;
+        }
+
+        .yen {
+            font-size: pxrem(28);
+        }
+
+        .txt {
+            margin-top: pxrem(33);
+            color: #92979b;
+            font-size: pxrem(21);
+        }
+    }
+
+    .color-block {
+        margin: pxrem(38) pxrem(35) pxrem(23);
+        @extend %flex-bt-vc;
+
+        .block {
+            width: pxrem(212);
+            padding-top: pxrem(35);
+            padding-bottom: pxrem(35);
+            background-color: #f5f5f5;
+            text-align: center;
+            font-size: pxrem(35);
+            text-align: center;
+            border-radius: pxrem(12);
+            @extend %c-0;
+        }
+
+        text {
+            @extend %c-92979b;
+            font-size: pxrem(21);
+            margin-top: pxrem(22);
+        }
+    }
+
+    .base-info {
+        @extend %bg-fff;
+        padding: pxrem(47) 0;
+    }
+}
+
+.waring {
+    @extend %flex-com-vc;
+    height: pxrem(118);
+    @extend %bg-fff;
+
+    .waring-content {
+        flex: 1;
+    }
+}
+
+.list-block {
+    padding-top: pxrem(25);
+    padding-bottom: pxrem(25);
+    @extend %bg-fff;
+
+    .label {
+        width: pxrem(270);
+
+        image {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+
+    .item {
+        @extend %flex-com-vc;
+        padding-top: pxrem(25);
+        padding-bottom: pxrem(25);
+    }
+
+    .content {
+        flex: 1;
+        color: #000;
+
+        .font-pink,
+        .font-gray {
+            margin-left: pxrem(20);
+        }
+    }
+}
+
+.customer-detail-page {
+    min-height: 100%;
+    @extend %bg-fff;
+}
+
+.bg-f5f5f5 {
+    background: #f5f5f5 !important;
+}
+
+.common-padding {
+    padding-left: pxrem(35);
+    padding-right: pxrem(35);
+}
+
+.mt-23 {
+    margin-bottom: pxrem(23);
+}
+
+.icon-before {
+    width: pxrem(35);
+    margin-right: pxrem(22);
+}
+
+.font-28 {
+    font-size: pxrem(28);
+}
+
+.font-gray {
+    @extend %c-92979b;
+}
+
+.font-pink {
+    @extend %color-dc1d54;
+}
+
+.nav-view {
+    .fix {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 500;
+    }
+
+    width: 100%;
+
+    .nav {
+        height: pxrem(106);
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+        line-height: pxrem(106);
+        @extend %bg-fff;
+        font-size: 16px;
+        white-space: nowrap;
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        // z-index: 99;
+    }
+
+    .nav-item {
+        width: 20%;
+        display: inline-block;
+        text-align: center;
+        font-size: pxrem(26);
+        color: #666;
+        position: relative;
+    }
+
+    .nav-item.active {
+        color: #dc1d54;
+
+        &:after {
+            position: absolute;
+            content: "";
+            height: pxrem(4);
+            left: pxrem(23);
+            right: pxrem(23);
+            bottom: pxrem(1);
+            background-color: #ff5183;
+        }
+    }
+
+    .tab-box {
+        background: greenyellow;
+        padding-top: 80rpx;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .tab-content {
+        overflow-y: scroll;
+    }
+}
+
+.content-notes {
+    .fix{
+        margin-top:pxrem(106);
+    }
+    .notes-des-wrap {
+        background-color: #f5f5f5;
+        padding: pxrem(57) pxrem(35) pxrem(35);
+    }
+
+    .note {
+        margin-bottom: pxrem(23);
+
+        view {
+            display: inline-block;
+            @extend %bg-fff;
+            border: pxrem(1) solid #ccc;
+            font-size: pxrem(28);
+            color: #000;
+            line-height: pxrem(50);
+            padding: pxrem(21) pxrem(25);
+            border-radius: pxrem(23);
+        }
+    }
+
+    .notes-imgs-wrap {
+        padding-left: pxrem(35);
+        padding-top: pxrem(35);
+        display: flex;
+        display: -webkit-flex;
+        flex-wrap: wrap;
+
+        .img {
+            width: pxrem(142);
+            height: pxrem(142);
+            margin: 0 pxrem(35) pxrem(35) 0;
+        }
+    }
+}
+
+.content-labels {
+    margin-top: pxrem(22);
+    padding: pxrem(47) 0 0 pxrem(41);
+    @extend %bg-fff;
+
+    .row {
+        position: relative;
+        padding-left: pxrem(133);
+    }
+
+    .label {
+        position: absolute;
+        left: 0;
+        top: pxrem(21);
+        width: pxrem(133);
+    }
+
+    .item {
+        display: inline-block;
+        font-size: pxrem(23);
+        color: #dc1d54;
+        text-align: center;
+        width: pxrem(140);
+        height: pxrem(70);
+        line-height: pxrem(70);
+        border: pxrem(1) solid #ff5183;
+        border-radius: pxrem(50);
+        margin-right: pxrem(22);
+        margin-bottom: pxrem(47);
+    }
+}
+
+.content-plan {
+    padding-bottom: pxrem(62);
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: pxrem(142);
+        padding-left: pxrem(35);
+        padding-right: pxrem(35);
+        @extend %bg-fff;
+        border: pxrem(1) solid #e4e4e4;
+
+        button {
+            background: #ff5183;
+            width: pxrem(142);
+            height: pxrem(67);
+            color: #fff;
+            font-size: pxrem(28);
+            border-radius: pxrem(6);
+            box-shadow: 0px 12px 23px 0px rgba(255, 81, 131, 0.5);
+        }
+    }
+
+    text {
+        font-size: pxrem(26);
+        color: #92979b;
+    }
+
+    .row {
+        padding-left: pxrem(35);
+        padding-right: pxrem(35);
+    }
+
+    .row1 {
+        display: flex;
+        justify-content: space-between;
+        color: #92979b;
+        font-size: pxrem(26);
+        padding-top: pxrem(57);
+        padding-bottom: pxrem(53);
+
+        text {
+            color: #dc1d54;
+            margin-left: pxrem(6);
+        }
+    }
+
+    .row2 {
+        font-size: pxrem(35);
+        color: #000;
+
+        text {
+            color: #92979b;
+            margin-left: pxrem(6);
+        }
+
+        margin-bottom: pxrem(57);
+    }
+
+    .list-item {
+        position: relative;
+        background: #fff;
+        padding-bottom: pxrem(32);
+        margin-bottom: pxrem(23);
+
+        .btn-group {
+            position: absolute;
+            right: pxrem(35);
+            bottom: pxrem(55);
+        }
+
+        button {
+            width: pxrem(118);
+            height: pxrem(67);
+            line-height: pxrem(67);
+            font-size: pxrem(28);
+            border-radius: pxrem(6);
+            display: inline-block;
+
+            &:last-child {
+                color: #333;
+                box-sizing: border-box;
+                border: pxrem(1) solid #ccc;
+                margin-left: pxrem(23) !important;
+                background: #fff;
+            }
+        }
+
+        .edit {
+            color: #fff;
+            background-color: #588aff;
+            box-shadow: 0px 12px 23px 0px rgba(88, 138, 255, 0.5);
+        }
+
+        .item {
+            margin-bottom: pxrem(35);
+        }
+    }
+}
+
+.icon-edit-wrap {
+    position: fixed;
+    right: pxrem(35);
+    bottom: pxrem(35);
+    z-index: 200;
+
+    .icon-edit {
+        width: pxrem(95);
+        height: pxrem(95);
+        border-radius: 50%;
+        box-shadow: 0px 12px 23px 0px rgba(0, 0, 0, 0.5);
+    }
+}

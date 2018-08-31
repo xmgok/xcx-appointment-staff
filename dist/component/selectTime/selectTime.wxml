@@ -1,0 +1,24 @@
+<view wx:if='{{show}}' class='selectTime'>
+    <view class="select_time_content">
+        <view class="select_time_title">
+            <view class="lf cancle_btn" bindtap='cancleBtnClick'>取消</view>
+            选择到店时间
+            <view bindtap='sureBtnClick' class="rt sure_btn">确定</view>
+        </view>
+        <view class="week_wrap clear">
+            <view wx:for='{{sevenDayData}}' bindtap='weekItemCick' data-item='{{item}}' data-index="{{index}}" wx:key='{{index}}' class='week_item {{selectWeek==index?"selected":""}}'>
+                <view class='week_text'>{{item.day}}</view>
+                <text class='week_day'>{{item.mouthDate}}</text>
+            </view>
+        </view>
+        <view class="steps_wrap clear">
+            <view wx:for='{{steps}}' bindtap='stepsItemCick' wx:key='{{index}}' data-item='{{item}}' data-index="{{index}}" wx:key='{{index}}' class='steps_item lf  {{item.class=="bookable"?"bookable":""}}  {{item.class=="haveabout"?"haveabout":""}} {{item.class=="line_del"?"line_del":""}}'>
+                <view class="middle_bg {{(index > selectStepsStart && index < selectStepsEnd)?'steps_middle':'' }} {{index == selectStepsStart ?'first_steps_middle':'' }} {{index == selectStepsEnd ?'last_steps_middle':'' }}"></view>
+                <view class='steps_text {{selectStepsStart==index?"select":""}} {{selectStepsEnd==index?"select":""}}'>
+                    <text>{{item.time}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<component-calendar show='{{calendarShow}}'></component-calendar>

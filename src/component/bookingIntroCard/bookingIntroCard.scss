@@ -1,0 +1,75 @@
+@import "../../sass-utils/mix";
+@import "../../sass-utils/variables";
+.customer_card_wrap {
+    margin-top:pxrem(24);
+    .customer_card {
+        background-color: #fff;
+        margin-bottom: pxrem(24);
+        box-shadow: 0px pxrem(4) pxrem(23) #efefef;
+        padding: pxrem(58) pxrem(30);
+        .cust_content {
+            position: relative;
+            .status_btn {
+                color: #fff;
+                border-radius: 50px;
+            }
+            &.no_confirmed {
+                border-left: pxrem(5) solid $c3;
+                .status_btn {
+                    background-color: $c3;
+                }
+            }
+            &.confirmed {
+                border-left: pxrem(5) solid #16ba5a;
+                .status_btn {
+                    background-color: #16ba5a;
+                }
+            }
+            &.completed {
+                border-left: pxrem(5) solid #bbbbbb;
+                .status_btn {
+                    background-color: #bbbbbb;
+                }
+            }
+            .status_btn {
+                display: inline-block;
+                padding: pxrem(8) pxrem(16);
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+            .cust_ul {
+                padding-left: pxrem(34);
+                .cust_li  {
+                    margin-bottom: pxrem(30);
+                    .icons {
+                        color: $c1;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                    &.booking_item {
+                        color: #aaa;
+                    }
+                    &.cust_name {
+                        font-size: pxrem(38);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.lf {
+    float: left;
+}
+
+.rt {
+    float: right;
+}
+
+.clear::after {
+    display: block;
+    clear: both;
+    content: "";
+}

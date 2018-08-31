@@ -1,0 +1,147 @@
+page {
+  padding-bottom: 20rpx;
+}
+
+.tec_tab {
+  display: flex;
+  line-height: 106rpx;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  box-shadow: inset 0rpx -1rpx 0rpx 0rpx #dddddd;
+}
+
+.tec_tab .before {
+  height: 4rpx;
+  background: transparent;
+}
+
+.tec_tab .before.LShift {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
+  right: 66.6667%;
+  -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.tec_tab .before.center {
+  position: absolute;
+  bottom: 0;
+  left: 33.333%;
+  right: 33.333%;
+  -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+  transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s, left 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.tec_tab .before.RShift {
+  position: absolute;
+  bottom: 0;
+  left: 66.6667%;
+  right: 0;
+  -webkit-transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
+  transition: right 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1) 0.09s;
+}
+
+.tec_tab .before .element {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  background: #ff5183;
+}
+
+.tec_tab .tec_tab_li {
+  flex: 1;
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.tec_tab .tec_tab_li.active {
+  color: #ff5183;
+}
+
+.no_technician {
+  text-align: center;
+  color: #aaa;
+}
+
+.employees {
+  padding: 40rpx 35rpx;
+  margin-bottom: 12rpx;
+  background: #fff;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+}
+
+.employees .inline_block {
+  display: inline-block;
+  font-size: 28rpx;
+}
+
+.employees .emp_name {
+  color: #000000;
+  margin-right: 16rpx;
+}
+
+.employees .emp_code {
+  color: #92979b;
+  margin-right: 16rpx;
+}
+
+.employees .bookable {
+  background-color: #5D97FF;
+}
+
+.employees .no_bookable {
+  background-color: #cccccc;
+}
+
+.employees .belonger {
+  background-color: #FF5183;
+}
+
+.employees .state {
+  padding: 4rpx 8rpx;
+  border-radius: 6rpx;
+  color: #fff;
+  margin-right: 12rpx;
+}
+
+.employees .checked {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.Fixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 106rpx;
+  z-index: 1;
+  background-color: #ffffff;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  box-shadow: 0 4rpx 23rpx 0 rgba(0, 0, 0, 0.1);
+}
+
+.Fixed .people {
+  margin-left: 36rpx;
+  line-height: 106rpx;
+  color: #92979b;
+  font-size: 28rpx;
+}
+
+.Fixed .people .number {
+  font-size: 35rpx;
+  color: #f96868;
+  display: inline-block;
+}
+
+.Fixed .submit {
+  line-height: 106rpx;
+  font-size: 35rpx;
+  padding: 0 78rpx;
+  background: #5D97FF;
+  color: #fff;
+}

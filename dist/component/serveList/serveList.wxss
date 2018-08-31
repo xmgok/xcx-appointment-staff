@@ -1,0 +1,95 @@
+.sc_content {
+  display: -webkit-box;
+  min-height: 100vh;
+  margin-bottom: 106rpx;
+}
+
+.sc_content .server_list {
+  width: 152rpx;
+  background: #f5f5f5;
+  box-shadow: inset -1rpx 0 0 0 #dddddd;
+}
+
+.sc_content .server_list .server_list_li {
+  width: 100%;
+  line-height: 106rpx;
+  box-shadow: inset 0rpx -1rpx 0rpx 0rpx #dddddd;
+  text-align: center;
+  color: #333333;
+  font-size: 23rpx;
+}
+
+.sc_content .server_list .server_list_li.active {
+  background: #fff;
+}
+
+.sc_content .Product_list {
+  -webkit-box-flex: 1;
+}
+
+.sc_content .Product_list .Product_list_li {
+  padding: 34rpx;
+  background: #fff;
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  font-size: 23rpx;
+  box-shadow: inset 0rpx -1rpx 0rpx 0rpx #dddddd;
+}
+
+.sc_content .Product_list .Product_list_li .Product_name {
+  font-size: 28rpx;
+  color: #333333;
+  margin-bottom: 28rpx;
+}
+
+.sc_content .Product_list .Product_list_li .Product_date {
+  color: #92979b;
+}
+
+.sc_content .Product_list .Product_list_li .price {
+  margin-top: 28rpx;
+}
+
+.sc_content .Product_list .Product_list_li .price .Product_Present {
+  color: #f96868;
+  display: inline-block;
+  margin-right: 16rpx;
+}
+
+.sc_content .Product_list .Product_list_li .price .Product_price {
+  color: #cccccc;
+  display: inline-block;
+  text-decoration: line-through;
+}
+
+.sc_content .Product_list .Product_list_li .Product_count {
+  padding: 50rpx 0;
+}
+
+.sc_content .Product_list .Product_list_li .Product_count .icons_count {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  border: solid 2rpx #bbbbbb;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 32rpx;
+}
+
+.sc_content .Product_list .Product_list_li .Product_count .icons_count.count_minus {
+  color: #bbbbbb;
+}
+
+.sc_content .Product_list .Product_list_li .Product_count .icons_count.count_add {
+  background: #f96868;
+  color: #fff;
+  border: 0;
+}
+
+.sc_content .Product_list .Product_list_li .Product_count .counting {
+  display: inline-block;
+  font-size: 28rpx;
+  color: #333;
+  margin: 0 22rpx;
+}

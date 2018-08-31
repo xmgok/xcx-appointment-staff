@@ -1,0 +1,56 @@
+<view class="content_state">
+    <view class="state_text">
+        <view class="text_name">{{'张小姐'}}</view>
+        <view>{{'查看客户详情'}}</view>
+    </view>
+    <view class="state_mark">
+        <view class="mark_vip">会员号</view>
+        <view class="mark_num">{{3212312312}}</view>
+    </view>
+</view>
+<view class="info_content">
+    <view class="info_cell">
+        <view class="title">预约门店：</view>
+        <view class="cell_color">{{'上海店塘桥店'}}</view>
+    </view>
+    <view class="info_cell">
+        <view class="title">预约时间：</view>
+        <view class="cell_color">{{'2018-08-25 13:30:00'}}</view>
+    </view>
+    <view class="info_cell">
+        <view class="title">预约时长：</view>
+        <view class="cell_color">{{'90 min'}}</view>
+    </view>
+    <!-- <view class="content_server"> -->
+    <view class="info_cell">
+        <view class="title">预约服务：</view>
+        <view>
+            <view class=" cell_color">{{'服务护理'}}</view>
+        </view>
+    </view>
+    <view class="info_cell">
+        <view class="title">预约技师：</view>
+        <view>
+            <view class=" cell_color">{{'技师1'}}</view>
+        </view>
+    </view>
+    <view class="info_cell">
+        <view class="title">门店备注：</view>
+        <view class=" cell_color">{{''}}</view>
+    </view>
+    <view class="info_cell">
+        <view class="title">客户备注：</view>
+        <view class=" cell_color">{{''}}</view>
+    </view>
+    <view bindtap='editClick' class="booking_btn">编辑</view>
+    <!-- </view> -->
+    <!-- <view class="content_server">
+        <view>门店备注：</view>
+        <view class="server_li cell_color">{{''}}</view>
+    </view>
+    <view class="content_server">
+        <view>客户备注：</view>
+        <view class="server_li cell_color">{{''}}</view>
+    </view>
+    <view class="booking_btn">编辑</view> -->
+</view>

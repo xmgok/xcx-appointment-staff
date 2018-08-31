@@ -1,0 +1,337 @@
+@import "../../sass-utils/mix";
+
+/*
+.link {
+  text-align: center;
+  line-height: pxrem(75);
+  font-size: pxrem(28);
+  border-bottom: pxrem(1) solid #dddddd;
+}
+*/
+
+.page-index {
+  color: #363840;
+  .hd {
+    background: white;
+    margin-bottom: rpx2(10);
+    padding: 0 rpx2(15);
+    .hd-header {
+      height: rpx2(70);
+      display: -webkit-box;
+      -webkit-box-align: center;
+      .img1 {
+        width: rpx2(20);
+        height: rpx2(20);
+      }
+      .img-arrow {
+        width: rpx2(6);
+        height: rpx2(10);
+      }
+      .text {
+        -webkit-box-flex: 1;
+        box-sizing: border-box;
+        padding-left: rpx2(12);
+        font-size: rpx2(18);
+        font-weight: 600;
+        color: rgba(54, 56, 64, 1);
+        line-height: rpx2(25);
+      }
+    }
+  }
+  .user-img {
+    width: rpx2(32);
+    height: rpx2(32);
+    border: rpx2(2) solid white;
+    box-shadow: pxrem(0) pxrem(3) pxrem(4) rgba(185, 183, 194, .5);
+    border-radius: 50%;
+  }
+  .user-header {
+    text-align: center;
+    padding-bottom: rpx2(10);
+    color: #363840;
+    .pic-wrap {
+      display: -webkit-box;
+      -webkit-box-align: center;
+      padding: rpx2(12) 0;
+      .name {
+        padding-left: rpx2(16);
+        font-size: rpx2(14);
+        text {
+          font-weight: bold;
+        }
+      }
+    }
+    .rank {
+      font-size: rpx2(14);
+      line-height: rpx2(20);
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      margin-top: rpx2(10);
+      text {
+        display: block;
+      }
+      .text {
+        margin-left: rpx2(6);
+        border: rpx2(1) solid $c3;
+        color: $c3;
+        padding: 0 rpx2(5);
+        border-radius: rpx2(5);
+        font-size: rpx2(11);
+      }
+    }
+    .num {
+      line-height: rpx2(60);
+      font-size: rpx2(20);
+      text {
+        font-size: rpx2(42);
+      }
+    }
+    .notice {
+      background: rgba(244, 244, 244, 1);
+      border-radius: rpx2(16);
+      display: inline-block;
+      line-height: rpx2(32);
+      padding-left: rpx2(13);
+      font-size: rpx2(12);
+      margin-top: rpx2(10);
+      padding-right: rpx2(10);
+      & > view {
+        display: -webkit-box;
+        -webkit-box-align: center;
+      }
+      image {
+        width: rpx2(13);
+        height: rpx2(12);
+      }
+      .text {
+        margin-left: rpx2(6);
+        text {
+          color: white;
+          background: rgba(255, 81, 131, 1);
+          border-radius: rpx2(3);
+          font-size: rpx2(11);
+          line-height: rpx2(16);
+          padding: rpx2(2) rpx2(4);
+        }
+      }
+    }
+  }
+  .today-info {
+    padding-bottom: rpx2(18);
+    .item-wrap {
+      display: -webkit-box;
+      -webkit-box-align: center;
+      padding-bottom: rpx2(15);
+    }
+    .item {
+      box-sizing: border-box;
+      text-align: right;
+      height: rpx2(116);
+      -webkit-box-flex: 1;
+      color: white;
+      border-radius: rpx2(10);
+      padding: 0 rpx2(14) 0 0;
+      position: relative;
+      image {
+        width: rpx2(24);
+        height: rpx2(24);
+        position: absolute;
+        left: rpx2(14);
+        top: rpx2(14);
+      }
+      .text {
+        font-size: rpx2(14);
+        line-height: rpx2(20);
+        padding-top: rpx2(12);
+        padding-bottom: rpx2(6);
+      }
+      .rank {
+        background: rgba(255, 255, 255, 1);
+        border-radius: rpx2(4);
+        font-size: rpx2(10);
+        color: rgba(171, 167, 255, 1);
+        line-height: rpx2(14);
+        display: inline-block;
+        padding: 0 rpx2(5);
+      }
+      .num {
+        padding-top: rpx2(17);
+        line-height: rpx2(33);
+        font-size: rpx2(14);
+        text {
+          font-size: rpx2(24);
+          padding-left: rpx2(5);
+          font-family: "PingFangSC-Semibold";
+        }
+      }
+      &:first-child {
+        margin-right: rpx2(15);
+      }
+      &.item1 {
+        background: linear-gradient(136deg, rgba(255, 78, 129, 1) 0%, rgba(255, 189, 123, 1) 100%);
+        box-shadow: 0 rpx2(10) rpx2(15) 0 rgba(214, 14, 90, 0.3);
+        .rank {
+          color: $c3;
+        }
+      }
+      &.item2 {
+        background: linear-gradient(315deg, rgba(248, 187, 255, 1) 0%, rgba(107, 151, 255, 1) 100%);
+        box-shadow: 0 rpx2(10) rpx2(15) 0 rgba(136, 48, 232, 0.3);
+      }
+      &.item3 {
+        background: linear-gradient(315deg, rgba(226, 224, 78, 1) 0%, rgba(86, 202, 154, 1) 100%);
+        box-shadow: 0 rpx2(10) rpx2(15) 0 rgba(46, 165, 121, 0.3);
+      }
+      &.item4 {
+        background: linear-gradient(315deg, rgba(127, 240, 172, 1) 0%, rgba(75, 184, 246, 1) 100%);
+        box-shadow: 0 rpx2(10) rpx2(15) 0 rgba(28, 150, 211, 0.3);
+      }
+    }
+  }
+  .tb-wrap {
+    padding-bottom: rpx2(22);
+    .num-info {
+      display: -webkit-box;
+      -webkit-box-align: center;
+      padding-bottom: rpx2(50);
+      .my-num {
+        padding-left: rpx2(10);
+        font-size: rpx2(18);
+        text {
+          font-size: rpx2(36);
+          font-family: "PingFangSC-Semibold";
+        }
+      }
+      .target {
+        padding-left: rpx2(10);
+        color: #96989C;
+        font-size: rpx2(14);
+        line-height: rpx2(20);
+        padding-top: rpx2(12);
+      }
+    }
+  }
+  .tb-num {
+    //border-top: rpx2(1) solid $c2;
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+    line-height: rpx2(17);
+    padding-top: rpx2(13);
+    position: relative;
+    width: rpx2(335);
+    text {
+      display: block;
+      &:first-child {
+        color: #96989C;
+      }
+      &:last-child {
+        line-height: rpx2(20);
+        font-size: rpx2(14);
+      }
+    }
+    .num1 {
+      &.num13 {
+        text-align: right;
+      }
+      &.num12 {
+        text-align: center;
+        color: #96989C;
+      }
+    }
+    .sanjiao {
+      position: absolute;
+      left: 100%;
+      top: 0;
+      width: 0;
+      height: 0;
+      margin-left: rpx2(-6);
+      border-top: pxrem(10) solid $c2;
+      border-left: pxrem(12) solid transparent;
+      border-right: pxrem(12) solid transparent;
+    }
+  }
+  .tb {
+    height: rpx2(130);
+    //background: rgba(0, 0, 0, .5);
+    position: relative;
+    .line-my {
+      position: absolute;
+      left: 0;
+      top: 30%;
+      border-top: rpx2(1) rgba(166, 166, 176, 0.3) dashed;
+      height: 0;
+      margin-top: rpx2(4);
+      width: rpx2(335);
+    }
+    .line-index {
+      position: absolute;
+      left: 0;
+      top: 20%;
+      border-top: rpx2(1) solid rgba(255,102,134,0.3);
+      height: 0;
+      width: rpx2(335);
+      margin-top: rpx2(4);
+      text {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: rpx2(-10);
+        background: $c2;
+        line-height: rpx2(20);
+        background: $c2;
+        border-radius: rpx2(11);
+        color: white;
+        font-size: rpx2(10);
+        padding: 0 rpx2(10);
+      }
+    }
+    .tb-canvas {
+      z-index: 5;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      canvas {
+        z-index: 5;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .show-num {
+      font-size: rpx2(12);
+      line-height: rpx2(20);
+      padding: 0 rpx2(8);
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: white;
+      margin-top: rpx2(-32);
+      margin-left: rpx2(-24);
+      background: rgba(0, 0, 0, .8);
+      border-radius: rpx2(2) rpx2(2) rpx2(2) 0;
+      box-shadow: 0 rpx2(2) rpx2(8) 0 rgba(0, 0, 0, 0.2);
+      &:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: rpx2(20);
+        margin-left: rpx2(-4);
+        width: 0;
+        height: 0;
+        border-top: rpx2(5) solid rgba(0, 0, 0, .8);
+        border-left: rpx2(4) solid transparent;
+        border-right: rpx2(4) solid transparent;
+
+      }
+    }
+  }
+}

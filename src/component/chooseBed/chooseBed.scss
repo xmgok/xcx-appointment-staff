@@ -1,0 +1,55 @@
+@import "../../sass-utils/mix";
+@import "../../sass-utils/ui";
+.choose-bed-wrap {
+  padding: pxrem(35);
+  .jj {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    padding-bottom: pxrem(48);
+    .jj-1 {
+      padding: 0 pxrem(20) 0 0;
+    }
+    .jj-2 {
+      margin-right: pxrem(24);
+      padding: 0 pxrem(10);
+      line-height: pxrem(45);
+      background: #f0f0f0;
+      color: #bbbbbb;
+      border: pxrem(1) solid #dddddd;
+      &.t2 {
+        background: white;
+        color: $c3;
+        border-color: $c3;
+      }
+    }
+  }
+  .list-wrap {
+    font-size: 0;
+    .item {
+      display: inline-block;
+      width: 25%;
+      box-sizing: border-box;
+      padding-right: pxrem(20);
+      padding-bottom: pxrem(20);
+      text {
+        display: block;
+        line-height: pxrem(75);
+        text-align: center;
+        background: #f0f0f0;
+        color: #bbbbbb;
+        font-size: pxrem(36);
+        border: pxrem(1) solid #dddddd;
+        &.t2 {
+          background: white;
+          color: $c3;
+          border-color: $c3;
+        }
+        &.t3 {
+          background: $c3;
+          color: white;
+          border-color: $c3;
+        }
+      }
+    }
+  }
+}

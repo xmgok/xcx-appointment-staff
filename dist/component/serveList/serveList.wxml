@@ -1,0 +1,24 @@
+<view class="sc_content">
+    <view class="server_list">
+        <view class="server_list_li {{serIndex==index?'active':''}}" data-index="{{index}}" bindtap="sercercard" wx:for="{{datas}}" wx:key="{{index}}">
+            {{item.name}}
+        </view>
+    </view>
+    <view class="Product_list">
+        <view class="Product_list_li {{cardIndex==index?'active':''}}" data-index="{{index}}" bindtap="Productcard" wx:for="{{datas[serIndex].cardList}}" wx:key="{{index}}">
+            <view>
+                <view class="Product_name">{{item.name}}</view>
+                <view class="Product_date">{{item.time}} 分钟</view>
+                <view class="price">
+                    <view class="Product_Present">现价：￥{{item.Present}}</view>
+                    <view class="Product_price">原价：{{item.price}}</view>
+                </view>
+            </view>
+            <view class="Product_count">
+                <view bindtap='subtractBtn'  data-serIndex='{{serIndex}}' data-item='{{item}}' data-index="{{index}}" wx:if="{{item.count}}" class="icons_count count_minus">-</view>
+                <view wx:if="{{item.count}}" class="counting">{{item.count}}</view>
+                <view bindtap='addBtn' data-serIndex='{{serIndex}}' data-item='{{item}}' data-index="{{index}}" class="icons_count count_add">+</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "护理日志",
+    "usingComponents": {
+      "component-loading": "/component/loading/loading"
+    }
+  }
+  

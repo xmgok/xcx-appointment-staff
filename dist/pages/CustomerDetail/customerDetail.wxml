@@ -1,0 +1,298 @@
+<view class="customer-detail-page bg-f5f5f5">
+    <view class="info-box  {{baseinfoshow?'show':''}}">
+        <!-- st:base info -->
+        <view class="base-info  mt-23">
+            <view class="pic">
+                <image src="../../images/del/pic.png"></image>
+            </view>
+            <view class="username">
+                <text class="name">萌小美</text>
+                <text class="uid">358212760</text>
+                <text class="vip">会员</text>
+                <text class="bank">10级</text>
+            </view>
+            <view class="card-money">
+                <view class="ye">
+                    <view class="money">
+                        <text class="yen">￥</text>
+                        3735.00
+                    </view>
+                    <text class="txt">可用余额</text>
+                </view>
+                <view class="fix">
+                    <view class="money">
+                        <text class="yen">￥</text>
+                        9802.00
+                    </view>
+                    <text class="txt">锁定金额</text>
+                </view>
+            </view>
+            <view class="color-block">
+                <view class="block">
+                    <view class="num">1735</view>
+                    <text>积分</text>
+                </view>
+                <view class="block">
+                    <view class="num">2</view>
+                    <text>套卡</text>
+                </view>
+                <view class="block">
+                    <view class="num">0</view>
+                    <text>优惠券</text>
+                </view>
+            </view>
+        </view>
+        <!-- end:base info -->
+        <!-- st:waring -->
+        <view class="waring common-padding mt-23">
+            <image class="icon-before" src="../../images/customer/icon-list01.png" mode="widthFix"></image>
+            <view class="waring-content font-28 font-gray">预警信息</view>
+        </view>
+        <!-- end:waring -->
+        <view class="list-block common-padding mt-23">
+            <view class="item">
+                <view class="label  font-28 font-gray">
+                    <image class="icon-before" src="../../images/customer/icon-list02.png" mode="widthFix"></image>
+                    <text class="">末次进店日期：</text>
+                </view>
+                <view class="content font-28 font-gray">2018-08-14<text class="font-pink">1天前</text></view>
+            </view>
+            <view class="item">
+                <view class="label  font-28 font-gray">
+                    <image class="icon-before" src="../../images/customer/icon-list03.png" mode="widthFix"></image>
+                    <text class="">当月进店频次：</text>
+                </view>
+                <view class="content font-28 font-gray">6次<text class="font-pink"></text></view>
+            </view>
+            <view class="item">
+                <view class="label  font-28 font-gray">
+                    <image class="icon-before" src="../../images/customer/icon-list04.png" mode="widthFix"></image>
+                    <text class="">生日：</text>
+                </view>
+                <view class="content font-28 font-gray">1986-08-22<text class="font-pink">7天后</text></view>
+            </view>
+            <view class="item">
+                <view class="label  font-28 font-gray">
+                    <image class="icon-before" src="../../images/customer/icon-list05.png" mode="widthFix"></image>
+                    <text class="">累积进店次数：</text>
+                </view>
+                <view class="content font-28 font-gray">463次<text class="font-pink"></text></view>
+            </view>
+            <view class="item">
+                <view class="label  font-28 font-gray">
+                    <image class="icon-before" src="../../images/customer/icon-list06.png" mode="widthFix"></image>
+                    <text class="">入会日期：</text>
+                </view>
+                <view class="content font-28 font-gray">2015-07-30<text class="font-pink">3年前</text></view>
+            </view>
+        </view>
+        <view class="list-block common-padding mt-23">
+            <view class="item">
+                <view class="label  font-28 font-gray">
+                    <image class="icon-before" src="../../images/customer/icon-list07.png" mode="widthFix"></image>
+                    <text class="">所属门店：</text>
+                </view>
+                <view class="content font-28 font-gray">0901萧山店<text class="font-gray"></text></view>
+            </view>
+            <view class="item">
+                <view class="label  font-28 font-gray">
+                    <image class="icon-before" src="../../images/customer/icon-list08.png" mode="widthFix"></image>
+                    <text class="">客户经理：</text>
+                </view>
+                <view class="content font-28 font-gray">王菁<text class="font-gray">00010974</text></view>
+            </view>
+            <view class="item">
+                <view class="label  font-28 font-gray">
+                    <image class="icon-before" src="../../images/customer/icon-list09.png" mode="widthFix"></image>
+                    <text class="">美容师：</text>
+                </view>
+                <view class="content font-28 font-gray">邱海莲<text class="font-gray">00011913</text></view>
+            </view>
+        </view>
+        
+    </view>
+    <!-- st: row tap -->
+    <view class="nav-view {{baseinfoshow?'':'fix'}}"> 
+        <scroll-view scroll-x="true" class="nav" scroll-with-animation="{{true}}">
+            <block wx:for="{{tapList}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+                <view class="nav-item {{currentTab==idx?'active':''}}" data-current='{{idx}}' bindtap="switchNav">
+                    {{navItem}}
+                </view>
+            </block>
+        </scroll-view>
+    </view>
+    <!-- end: row tap -->
+    <!-- st:重要备忘 -->
+    <view class="content-notes {{baseinfoshow?'':'fix'}}"  wx:if="{{currentTab==0}}">
+        <view class="notes-des-wrap">
+            <view class="note">
+                <view>肩颈比较疲劳，手肘会发麻</view>
+            </view>
+            <view class="note">
+                <view>顾客这几年感觉月经量比较少经理说了卵巢早衰引起的，说了女性能量1862一次，后面有会员体验的
+时候给顾客体验一次</view>
+            </view>
+            <view class="note">
+                <view>比较喜欢做艾灸，平时也很注重饮食</view>
+            </view>
+        </view>
+        <view class="notes-imgs-wrap">
+            <image class="img" src="../../images/del/up-img.jpg"></image>
+            <image class="img" src="../../images/del/up-img.jpg"></image>
+            <image class="img" src="../../images/del/up-img.jpg"></image>
+            <image class="img" src="../../images/del/up-img.jpg"></image>
+            <image class="img" src="../../images/del/up-img.jpg"></image>
+            <image class="img" src="../../images/del/up-img.jpg"></image>
+            <image class="img" src="../../images/del/up-img.jpg"></image>
+            <image class="img" src="../../images/del/up-img.jpg"></image>
+        </view>
+    </view>
+    <!-- end:重要备忘 -->
+    <!-- st:标签 -->
+    <view class="content-labels  {{baseinfoshow?'':'fix'}}" wx:if="{{currentTab==1}}">
+        <view class="row">
+            <text class="label">项目偏好</text>
+            <view class="label-wp">
+                <text class="item">手工</text>
+                <text class="item">手工</text>
+                <text class="item">手工</text>
+            </view>
+        </view>
+        <view class="row">
+            <text class="label">部位偏好</text>
+            <view class="label-wp">
+                <text class="item">肩颈</text>
+                <text class="item">臀部</text>
+            </view>
+        </view>
+        <view class="row">
+            <text class="label">力度偏好</text>
+            <view class="label-wp">
+                <text class="item">中度</text>
+            </view>
+        </view>
+        <view class="row">
+            <text class="label">职业</text>
+            <view class="label-wp">
+                <text class="item">白领</text>
+            </view>
+        </view>
+    </view>
+    <!-- end:标签 -->
+    <!-- st:护理规划 -->
+    <view class="content-plan  {{baseinfoshow?'':'fix'}}" wx:if="{{currentTab==2}}">
+        <view class="top">
+            <text>护理规划管理</text>
+            <view>
+                <button>添加</button>
+            </view>
+        </view>
+        <view class="list">
+            <view class="list-item" hover-class="none" hover-stop-propagation="false">
+                <view class="row1 row">
+                    <view>kneipp精油减压护理</view>
+                    <view>
+                        消费进度
+                        <text>0/10</text>
+                    </view>
+                </view>
+                <view class="row2 row">
+                    马丽萍
+                    <text>613001117</text>
+                </view>
+                <view class="item row">
+                    <text>规划次数：</text>
+                    10
+                </view>
+                <view class="item row">
+                    <text>规划单价：</text>
+                    ￥680.00
+                </view>
+                <view class="item row">
+                    <text>规划总额：</text>
+                    ￥6800.00
+                </view>
+                <view class="item row">
+                    <text>规划周期：</text>
+                    每周2次
+                </view>
+                <view class="btn-group" hover-class="none" hover-stop-propagation="false">
+                    <button class="edit">修改</button>
+                    <button class="del">删除</button>
+                </view>
+            </view>
+            <view class="list-item" hover-class="none" hover-stop-propagation="false">
+                <view class="row1 row">
+                    <view>kneipp精油减压护理</view>
+                    <view>
+                        消费进度
+                        <text>0/10</text>
+                    </view>
+                </view>
+                <view class="row2 row">
+                    马丽萍
+                    <text>613001117</text>
+                </view>
+                <view class="item row">
+                    <text>规划次数：</text>
+                    10
+                </view>
+                <view class="item row">
+                    <text>规划单价：</text>
+                    ￥680.00
+                </view>
+                <view class="item row">
+                    <text>规划总额：</text>
+                    ￥6800.00
+                </view>
+                <view class="item row">
+                    <text>规划周期：</text>
+                    每周2次
+                </view>
+                <view class="btn-group" hover-class="none" hover-stop-propagation="false">
+                    <button class="edit">修改</button>
+                    <button class="del">删除</button>
+                </view>
+            </view>
+            <view class="list-item" hover-class="none" hover-stop-propagation="false">
+                <view class="row1 row">
+                    <view>kneipp精油减压护理</view>
+                    <view>
+                        消费进度
+                        <text>0/10</text>
+                    </view>
+                </view>
+                <view class="row2 row">
+                    马丽萍
+                    <text>613001117</text>
+                </view>
+                <view class="item row">
+                    <text>规划次数：</text>
+                    10
+                </view>
+                <view class="item row">
+                    <text>规划单价：</text>
+                    ￥680.00
+                </view>
+                <view class="item row">
+                    <text>规划总额：</text>
+                    ￥6800.00
+                </view>
+                <view class="item row">
+                    <text>规划周期：</text>
+                    每周2次
+                </view>
+                <view class="btn-group">
+                    <button class="edit">修改</button>
+                    <button class="del">删除</button>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- end:护理规划 -->
+    <!-- st:icon edit -->
+    <view class="icon-edit-wrap" wx:if="{{currentTab<2}}"  bindtap="goEdit">
+        <image class="icon-edit" src="../../images/customer/icon-customer-edit.png"></image>
+    </view>
+    <!-- end:icon edit -->
+</view>

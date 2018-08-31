@@ -1,0 +1,39 @@
+<view class="content_edit">
+    <view class="state_text">
+        <view class="text_name">{{'张小姐'}}</view>
+        <view>{{'查看客户详情'}}</view>
+    </view>
+    <view class="state_mark">
+        <view class="mark_vip">会员号</view>
+        <view class="mark_num">{{3212312312}}</view>
+    </view>
+    <navigator url="/pages/technician/technician" hover-class="none">
+        <view class="New_item">
+            <view class="New_title">预约技师</view>
+            <view class="New_info">请选择 ></view>
+        </view>
+    </navigator>
+    <navigator url="/pages/technician/technician" hover-class="none">
+        <view class="New_item">
+            <view class="New_title">预约时长</view>
+            <view class="New_info">请选择 ></view>
+        </view>
+    </navigator>
+    <view bindtap='selectTime' class="New_item">
+        <view class="New_title">预约时间</view>
+        <view class="New_info">请选择 ></view>
+    </view>
+    <navigator url="/pages/servecard/servecard" hover-class="none">
+        <view class="New_item">
+            <view class="New_title">预约卡项</view>
+            <view class="New_info">请选择 ></view>
+        </view>
+    </navigator>
+    <view class="New_Text">
+        <view class="New_title">预约备注</view>
+        <textarea class="textarea" auto-focus />
+    </view>
+    <component-selecttime show='{{timeShow}}'></component-selecttime>
+    <view class="New_btn save_btn">保存修改</view>
+    <view class="New_btn cancle_btn">取消预约</view>
+</view>

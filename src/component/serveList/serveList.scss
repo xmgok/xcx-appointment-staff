@@ -1,0 +1,82 @@
+@import "../../sass-utils/mix";
+@import "../../sass-utils/variables";
+.sc_content{
+    display: -webkit-box;
+    min-height: 100vh;
+    margin-bottom: pxrem(106);
+    .server_list{
+        width:pxrem(152);
+        background: #f5f5f5;
+        box-shadow: inset pxrem(-1) 0px 0px 0px #dddddd;
+        .server_list_li{
+            width: 100%;
+            line-height:pxrem(106);
+            box-shadow: inset pxrem(0) pxrem(-1) pxrem(0) pxrem(0) #dddddd;
+            text-align: center;
+            color: #333333;
+            font-size:pxrem(23);
+            &.active{
+                background: #fff;
+            }
+        }
+    }
+    .Product_list{
+        -webkit-box-flex: 1;
+        .Product_list_li{
+            padding:pxrem(34);
+            background: #fff;
+            display: -webkit-box;
+            -webkit-box-pack: justify;
+            font-size:pxrem(23);
+            box-shadow: inset pxrem(0) pxrem(-1) pxrem(0) pxrem(0) #dddddd;
+            .Product_name{
+                font-size:pxrem(28);
+                color: #333333;
+                margin-bottom:pxrem(28);
+            }
+            .Product_date{
+                color: #92979b;
+            }
+            .price{
+                margin-top:pxrem(28);
+                .Product_Present{
+                    color: #f96868;
+                    display: inline-block;
+                    margin-right:pxrem(16);
+                }
+                .Product_price{
+                    color: #cccccc;
+                    display: inline-block;
+                    text-decoration: line-through;    
+                }
+            }
+            .Product_count{
+                padding:pxrem(50) 0;
+                .icons_count{
+                    display: inline-block;
+                    width:pxrem(40);
+                    height:pxrem(40);
+                    border: solid pxrem(2) #bbbbbb;
+                    border-radius: 50%;
+                    text-align: center;
+                    line-height:pxrem(40);
+                    font-size:pxrem(32); 
+                    &.count_minus{
+                        color:#bbbbbb;
+                    }
+                    &.count_add{
+                        background: #f96868;
+                        color: #fff;
+                        border:0;
+                    }
+                }
+                .counting{
+                    display: inline-block;
+                    font-size:pxrem(28);
+                    color: #333;
+                    margin: 0 pxrem(22);
+                }
+            }
+        }
+    }
+}
